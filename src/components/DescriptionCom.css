@@ -1,0 +1,134 @@
+.description-box {
+    z-index: 5;
+    font-weight: 700;
+    width: 430px;
+    height: 290px;
+    margin-top: 7.7rem;  
+    margin-left: -12.1rem; 
+
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    padding: 12px;
+    border-radius: 8px;
+    /* border: solid red 2px; */
+    background-color:rgb(96, 122, 189);
+    position: relative;
+    background-image: url("Images/MovieWheel.png");
+    background-blend-mode: screen ;
+    /*  screen overlay darken lighten color-dodge saturation luminosity    */
+    background-size: 96%;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+
+    /* position: relative;
+    align-content: center; */
+}
+
+/* .description-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url("Images/MovieWheel.png");
+    height:290px;
+    width: 290px;
+    opacity: 0.5; 
+}    */
+
+.title-text {
+
+    background-color: rgb(197, 71, 197);
+    border-radius: 10px;
+    z-index: 6;
+    display: flex;
+    height: 60px;
+    width: 400px;
+    font-size: minmax (2.5em 4em);
+    align-self: center;
+    padding: 5px;
+}
+
+.description-text {
+    z-index: 7;
+    height: 210px;
+    width: 380px;
+    display: flex;
+
+    align-self: center;
+    /* background-color:rgba(123, 224, 84, .5); */
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 5px;
+    font-size: 3rem;
+    
+}
+
+
+.ticket {
+    z-index: 10;
+    display: flex;
+    /* align-self: flex-end;
+    justify-self: flex-end; */
+    height: 50px;
+    width: 100px;
+    margin: 0;
+    align-self: end;
+    margin-top: -30px;
+}
+
+
+
+
+
+/* .close-button {
+    color: red;
+    border-radius: .5rem;
+    height: 40px;
+    width: 80px;
+    background-color: rgb(203, 124, 203);
+    position: absolute;
+    margin-left: 360px;
+    margin-top: 140px;
+} */
+
+/* 
+
+.description-box {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    background-color:rgb(105, 228, 98);
+}
+.title {
+    font-size: 4em;
+    width: 100vw;
+}
+.title-box {
+
+    width: 100vw;
+    align-self: center;
+    justify-self: center;
+    background-color: green;
+    border-radius: 4rem;
+    margin-right: 2em;
+    margin-left: 2em;
+    padding: 1em;
+}
+
+
+
+.background-image {
+    width: 100vw;
+    height: 100%;
+
+    opacity: 20%;
+    width: 100vw;
+ 
+    /* padding-left: 1.5em;
+    padding-top: 1.5em;
+    margin-bottom: -1em;
+    margin-top: 30%; */

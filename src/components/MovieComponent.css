@@ -1,0 +1,178 @@
+.movie {
+    /* min-width: 70%;
+    max-width: 90%; */
+    width: 100%;
+    /* margin: 10px; */
+    display: grid;
+
+    height: 300px;
+    width: 440px; 
+    
+    background-color: rgb(31, 119, 132); 
+    justify-self: center;
+    border-radius: 8px;
+    grid-template-columns: 44% 56%;
+    grid-template-rows: 310px;
+   
+    /* grid-template-areas: "poster text-area"; */
+    /* border: 3px solid red; */
+}
+
+.poster-area {
+    height: 300px;
+    padding: 8px 4px 8px 8px;
+}
+
+.poster {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+
+
+}
+
+
+.text-area  {
+    width: 100%;
+    padding: .75rem;
+    color: white;
+    margin: 0;
+    /* border: 3px solid green; */
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 20% 18% 10% 15% 22% 15%;
+
+    grid-template-areas: 
+        "head head head head head head"
+        "reel reel reel reel reel reel"
+        "link link link link link link"
+        "year year rating rating minutes minutes"
+        "scale scale scale count count count"
+        "review review review score score score";
+}
+
+.title {
+    grid-area: head;
+    /* width: fit-content;
+    height: fit-content; */
+    text-align: center;
+    align-self: center;
+    /* word-wrap: wrap; */
+    /* font-size: clamp(1rem, 5% + 1rem, 6rem); */
+    /* viewport-fit */
+   /* font-size-adjust: calc(.5rem 4rem); */
+    /* text-size-adjust: 90%; */
+    /* font-stretch: wider; */
+    /* font-size: 1.8rem; */
+    padding: 0;
+    margin: 0;
+
+}
+
+.reel {
+    grid-area: reel;
+    width: 100%;
+    height: 90%;
+    align-self: center;
+    justify-self: center;
+    
+}
+
+.description {
+    display: none; 
+    grid-area: reel;
+    justify-self: center;
+    align-self: center;
+}
+
+.link {
+    justify-self: center;
+    align-self: start;
+    font-size: 0.8rem;
+    grid-area: link;
+    text-decoration: underline;
+    margin-top: 4px;
+}
+
+.year {
+    font-size: 1rem;
+    align-self: center;
+    justify-self: center;
+    grid-area: year;
+    margin: 0;
+}
+
+.rating {
+    font-size: 1rem;
+    align-self: center;
+    justify-self: center;
+    grid-area: rating;
+    margin: 0;
+}
+
+.minutes {
+    font-size: 1rem;
+    align-self: center;
+    justify-self: end;
+    grid-area: minutes;
+    margin: 0;
+ 
+}
+
+.review-box {
+    background-color:rgba(246, 217, 54);
+    border-radius: 4px;
+    opacity: 70%;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin: 0;
+    grid-area: scale / scale / review / score;
+    height: 90%;
+    width: 100%;
+}
+
+.scale {
+    grid-area: scale;
+    height: 100%;
+    justify-self: center;
+    margin-top: 0;
+    margin-left: 0rem;
+    z-index: 2;
+}
+
+.count {
+    grid-area: count;
+    align-self: top;
+    justify-self: center;
+    padding: 0;
+    margin-top: 1rem;
+    margin-right: 0;
+    font-size: 1rem;
+    z-index: 2;
+}
+
+.review {
+    grid-area: review;
+    align-self: top;
+    justify-self: center;
+    font-size: .8rem;
+    font-weight: bolder;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: .5rem;
+    margin-left: .6rem;
+    z-index: 2;
+}
+
+.score {
+    grid-area: score;
+    margin-top: -1.2rem;
+    margin-right: .5rem;
+    padding: 0;
+    align-self: center;
+    justify-self: center;
+    z-index: 2;
+}
+
+
+

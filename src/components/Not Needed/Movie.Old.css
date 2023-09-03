@@ -1,0 +1,104 @@
+.poster {
+    height: 240px;
+    width: 180px;
+    margin: 0px;
+    padding: 0px;
+    border-color: yellow;
+    display: flex;
+    position: absolute;
+} 
+
+.card-body {
+
+    border-color: blue;
+    border-style: style;
+}
+
+.card {
+    background-color: lightslategrey;
+}
+
+#poster-column {
+    border-color: green;
+    border-style: solid;
+    display: flex;
+    position: relative;
+    align-content: center;
+    justify-content: center;
+}
+
+#text-column {
+    border-color: blueviolet;
+    border-style: solid;
+}
+
+h6{
+    font-style: underline;
+}
+
+/* 
+.container {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 33%;
+    background-color:aqua;
+}
+
+.movie-card {
+    height: 250px;
+    width: 400px;
+}
+
+#header {
+    min-height: 40px;
+    max-height: 60px;
+} */
+
+
+
+/* .poster-column {
+    background-color: pink;
+}
+
+
+.text-column {
+    background-color: lightsalmon;
+} */
+
+    
+/* 
+.container {
+    display: grid;
+    width: 100vw;
+    background-color: lightgreen;
+}  */
+
+/* #col5 {
+    background-color:rgb(140, 149, 222);
+    display: flex;
+    justify-content: center;
+    */
+/* 
+}
+
+#col7 {
+    background-color:rgb(123, 195, 29);
+}
+
+
+.movieHeader {
+    color: white;
+    min-height: 40px;
+    max-height: 60px;
+}  */
+
+
+
+
+
+
+
+
+
+
+
