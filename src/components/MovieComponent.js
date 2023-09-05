@@ -10,25 +10,14 @@ import ReactDOM from 'react-dom/client'
     const MovieComponent = ({ title, poster, description, year, rating, runtime, imbd, count, average}) => {
    
     const[handleClick, setHandleClick] = useState(false);
-    // const[size, setSize] = useState(false);
-
-    // const handleMouseEnter = () => {
-    //     setSize(true);
-    // };
-    // const handleMouseLeave = () => {
-    //     setSize(false)
-
-   
-
 
     return (
         <>
-            {handleClick ?  <DescriptionCom className="description">{description}</DescriptionCom> :
+            {handleClick ?  <DescriptionCom className="description" title={title} description={description}></DescriptionCom>  :
             <div className="movie">
                 <div className="poster-area">              
                     <img className="poster" src={poster} />
                 </div>   
-
                 <div className="text-area">
                     <h2 className="title">{title}</h2>
                         <img className="reel" src={Final}
