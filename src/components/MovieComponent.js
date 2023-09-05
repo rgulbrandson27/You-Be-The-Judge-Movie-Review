@@ -4,33 +4,35 @@ import movies from './MovieList.js';
 import Scale from './Images/Scale.png';
 import Final from './Images/Final.png';
 import DescriptionCom from './DescriptionCom.js';
-
+import reactDOM from 'react';
+import ReactDOM from 'react-dom/client'
 
     const MovieComponent = ({ title, poster, description, year, rating, runtime, imbd, count, average}) => {
-        
-        // function handleMouseOver() {
-        //     console.log("hi");
-        // }
-        
-        // const [mouseIsOver, setMouseIsOver] = useState(false);
+   
+    const[handleClick, setHandleClick] = useState(false);
+    // const[size, setSize] = useState(false);
 
-        // function showDescriptionBox() {
-        //     console.log('show');
-        // }
+    // const handleMouseEnter = () => {
+    //     setSize(true);
+    // };
+    // const handleMouseLeave = () => {
+    //     setSize(false)
 
-        return (
+   
 
+
+    return (
+        <>
+            {handleClick ?  <DescriptionCom className="description">{description}</DescriptionCom> :
             <div className="movie">
-                <div className="poster-area">
-                    <img className="poster" src={poster}/>
+                <div className="poster-area">              
+                    <img className="poster" src={poster} />
                 </div>   
 
                 <div className="text-area">
                     <h2 className="title">{title}</h2>
-                        <img className="reel" src={Final}/>
-                        <p className="description">
-                            <DescriptionCom/>
-                        </p>
+                        <img className="reel" src={Final}
+                            onClick = {e => setHandleClick(true)}/>
                     <p className="link">{imbd}</p>
                     <p className="year">{year}</p>
                     <p className="rating">{rating}</p>
@@ -41,24 +43,10 @@ import DescriptionCom from './DescriptionCom.js';
                         <p className="review">Leave a Review</p>
                         <p className="score">{average} / 5.0</p>
                     <div/>
-
-                    
                 </div>
-
-                {/* <modal>
-                    {Description({description})}
-                </modal> */}
-
-                {/* <div className="description-box" >
-                        <div className="title-box">
-                        <h1 className="descriptionBoxTitle">{title}</h1>
-                        </div>
-                        <p className="description-section">{description}</p> 
-                    </div> */}
             </div>
-
-            
-           
+    }
+        </>
         );
     }
 

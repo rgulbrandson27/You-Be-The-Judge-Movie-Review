@@ -2,9 +2,10 @@ import React from 'react';
 import Ticket from './Images/Ticket.png';
 import {UseState} from 'react';
 import './DescriptionCom.css'
+import movies from './MovieList';
 
 
-const Description = ({title, description}) => {
+const DescriptionCom = ({title, description}) => {
     // const [reviewInfo, setReviewInfo] = useState({info: "Review"})
 
 
@@ -30,4 +31,4 @@ const Description = ({title, description}) => {
   // )
 }
 
-export default Description;
+export default DescriptionCom;
