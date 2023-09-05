@@ -1,18 +1,10 @@
 .description-box {
-    
-  
     width: 440px;
     height: 300px;
-    /* margin-top: 7.7rem;  
-    margin-left: -12.1rem;  */
-
-    padding: 0;
     display: flex;
     flex-direction: column;
     justify-items: center;
-
-    
-    padding: 12px;
+    padding: 15px;
     border-radius: 8px;
     /* border: solid red 2px; */
     /* background-color:rgb(96, 122, 189); */
@@ -34,7 +26,6 @@
 
 .title-text {
     background-color: #0A9396;
-    /* background-color: rgb(197, 71, 197); */
     border-radius: 10px;
     z-index: 6;
     display: flex;
