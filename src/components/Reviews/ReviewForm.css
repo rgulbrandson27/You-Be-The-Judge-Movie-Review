@@ -1,0 +1,113 @@
+.review-container {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 450px;
+    margin-left: 10px;
+    outline: solid 10px  #0A9396;
+    justify-content: center;
+    align-content: center;
+    border-radius: .5rem;
+    background-color: #534c4b;
+    margin-top: 25px;
+    
+}
+
+.extra-div-for-style {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 450px;
+    outline: solid 10px  #0A9396;
+    background-color: white;
+    opacity: 0.7;
+    border-radius: .5rem;
+    padding: 30px;
+    align-items: center;
+}
+
+.review-form {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.review-title {
+  color:#534c4b;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.rating-box {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-between;
+    
+}
+
+
+
+.gavel-box {
+    display: flex;
+    justify-self: center;
+    margin-right: 5px;
+  
+    align-self: center;
+
+}
+
+/* 
+ Y overflow
+
+    justify-items: center;
+    padding: 15px;
+
+    /* border: solid red 2px; */
+    /* background-color:rgb(96, 122, 189); */
+    /* background-color: #94D2Bd; */
+    /* background-color: #005F73;
+    position: relative;
+    background-image: url("Images/MovieWheel.png");
+    background-blend-mode: screen ; */
+    /*  screen overlay darken lighten color-dodge saturation luminosity    */
+    /* background-size: 96%;
+    
+    background-repeat: no-repeat;
+    background-position: bottom right; */
+ 
+
+/* .description-text {
+    z-index: 7;
+    height: 220px;
+    width: 400px;
+    display: flex;
+
+    text-decoration-color:aliceblue;
+    color:aliceblue;
+    align-self: center;
+    justify-items: center;
+    background-color:rgba(123, 224, 84, .5);
+    font-size: 1.3rem;
+    margin: 0;
+    padding: 10px;
+    border-radius:10px;
+    color: #005F73; 
+} */
+
+/* 
+.sign {
+    z-index: 10;
+    display: flex;
+    /* align-self: flex-end;
+    justify-self: flex-end; 
+    height: 60px;
+    width: 84px;
+    margin: 0;
+    align-self: end;
+    margin-top: -30px;
+    filter:opacity(.6);
+ */

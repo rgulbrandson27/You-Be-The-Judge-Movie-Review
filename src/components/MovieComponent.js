@@ -8,30 +8,29 @@ import reactDOM from 'react';
 import ReactDOM from 'react-dom/client'
 
     const MovieComponent = ({ title, poster, description, year, rating, runtime, imbd, count, average}) => {
-   
+
     const[handleClick, setHandleClick] = useState(false);
     const[handleHover, setHandleHover] = useState(false);
-    const posterStyle = { minWidth: "115%", minHeight: "115%", z:"12"};
+    const posterStyle = {border: "4px solid rgb(10,147,150)", radius:"8px", width: "214px", height: "300px", margin:"-10px", marginRight:"-12px", z:"20"};
+    // const length = {title}.length;
 
-    const length = {title}.length;
-    
     return (
         <>
-            {handleClick ?  <DescriptionCom className="description" title={title} description={description}></DescriptionCom>  
+            {handleClick ?  <DescriptionCom className="description" setHandleClick={setHandleClick} title={title} description={description}></DescriptionCom>  
             : <div className="movie">
                 <div className="poster-area"     
                     onMouseEnter = {e => setHandleHover(true)}
                     onMouseLeave = {e => setHandleHover(false)}>      
-                  
-                  {handleHover ? <img className="poster" style={posterStyle} src={poster}/> : <img className="poster" src={poster}/> 
-                  
+
+                    {handleHover ? <img className="poster" style={posterStyle} src={poster}/> : <img className="poster" src={poster}/> 
+    
                     }
                 </div>   
                 <div className="text-area">
                     <h2 className="title">{title}</h2>
                         <img className="reel" src={NewViewWhite}
                             onClick = {e => setHandleClick(true)}/>
-                    <p className="link">{imbd}</p>
+                    <p className="link">imbd: {imbd}</p>
                     <p className="year">{year}</p>
                     <p className="rating">{rating}</p>
                     <p className="minutes">{runtime}</p>                    

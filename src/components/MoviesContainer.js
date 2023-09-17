@@ -4,12 +4,9 @@ import './MovieComponent.css';
 import './MoviesContainer.css';
 import movies from './MovieList';
 
-
-
 const MoviesContainer = () => {
     return (
     <div>
-
         <div className="main">
             <div className="movies-container">
                 {movies.map((movie => (
@@ -25,20 +22,10 @@ const MoviesContainer = () => {
                         link={movie.link}
                         />
                         )
-                        ))
-                    }
+                    ))
+                }
             </div>
-                
-            {/* <div className="description-box descriptionBackground">
-                 <div className="title-box ">
-                    <h1 className="title ">Movie Title Goes Here</h1>
-                </div>
-                <p className="description ">Two New Yorkers accused of murder in rural Alabama while on their way back to college call in the help of one of their cousins, a loudmouth lawyer with no trial experience.</p> 
-            </div> */}
-
-
         </div>  
-
     </div>
 )
 }

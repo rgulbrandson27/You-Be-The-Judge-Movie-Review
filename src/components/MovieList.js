@@ -52,7 +52,10 @@ import MovieComponent from './MovieComponent.js';
     "runtime": "161 min.",
     "description": "An upstate Michigan lawyer defends a soldier who claims he killed an innkeeper due to temporary insanity after the victim raped his wife. What is the truth, and will he win his case?",
     "poster": "https://m.media-amazon.com/images/I/51BYIh9ntUL.__AC_SX300_SY300_QL70_FMwebp_.jpg",
-    "link": "https://www.imdb.com/title/tt0052561/?ref_=tt_mv_close"
+    "link": "https://www.imdb.com/title/tt0052561/?ref_=tt_mv_close",
+    "reviews": [{rating:"", author:"", review:""}, {rating:4.5, author:"", review:""}],
+    "ratings-count": null,
+    "average-rating": null
 },
 
 {
@@ -119,14 +122,14 @@ import MovieComponent from './MovieComponent.js';
 
   {
     "id": "4",
-    "imbd": "tt0250494",
+    "imbd": "tt9071322",
     "title": "Dark Waters",
-    "year": "2001",
+    "year": "2019",
     "rating": "PG-13",
-    "runtime": "96 min.",
-    "description": "Elle Woods, a fashionable sorority queen, is dumped by her boyfriend. She decides to follow him to law school. While she is there, she figures out that there is more to her than just looks.",
-    "poster": "https://www.imdb.com/title/tt0250494/?ref_=fn_al_tt_1",
-    "link": "https://www.imdb.com/title/tt0104257"
+    "runtime": "126 min.",
+    "description": "A corporate defense attorney takes on an environmental lawsuit against a chemical company that exposes a lengthy history of pollution.",
+    "poster": "https://m.media-amazon.com/images/I/41aVNc9-yvL._AC_.jpg",
+    "link": "https://www.imdb.com/title/tt9071322"
 },
 
   {
@@ -410,7 +413,7 @@ import MovieComponent from './MovieComponent.js';
         "rating": "R",
         "runtime": "120 min.",
         "description": "A tenacious lawyer takes on a case involving two companies responsible for causing several children to be diagnosed with leukemia due to the town's water supply being contaminated, at the risk of bankrupting his firm and career.",
-        "poster": "https://m.media-amazon.com/images/M/MV5BMTQxNDYzMTg1M15BMl5BanBnXkFtZTgwNzk4MDgxMTE@._V1_.jpg",
+        "poster": "https://m.media-amazon.com/images/I/41aVNc9-yvL._AC_.jpg",
         "link": "https://www.imdb.com/title/tt0104952/?ref_=fn_al_tt_1",
       },
 

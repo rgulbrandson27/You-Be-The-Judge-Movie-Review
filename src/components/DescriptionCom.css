@@ -18,8 +18,6 @@
     
     background-repeat: no-repeat;
     background-position: bottom right;
-
-
 }
 
 
@@ -70,6 +68,5 @@
     margin: 0;
     align-self: end;
     margin-top: -30px;
-    filter:opacity(.7);
-    
+    filter:opacity(.6);
 }

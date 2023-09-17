@@ -1,20 +1,37 @@
+
 #header {
-    height: 100px;
+    height: 120px;
     width: 100vw;
-    background-color: lightblue;
+    background-color: #534c4b;
+    color:  #0A9396;
+    padding: .5rem;
+    align-content: center;
+    display: grid;
+}
+
+.header-box {
+  height: 100%;
+  display: grid;
+  background-color: white;
+  border-radius: .5rem;
+  opacity: 0.7;
+  width: 90%; 
+  align-self: center;
+  justify-self: center;
+  padding: .5rem;
+  
+}
     /* display: grid;
     grid-row-gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   place-items: center; */
+
+
+#page-title {
+  display: grid;
+  align-self: center;
+  justify-self: center;
+  font-size: 3rem;
+  /* font-family: "Gagalin-Regular"; */
 }
 
-
-/* .item {
-    display: grid;
-    background-color: lavender;
-    border-style: solid;
-    border-color: blue;
-    width: 300px;
-    /* min-width: 100px;
-    max-width: 200px; */
- 

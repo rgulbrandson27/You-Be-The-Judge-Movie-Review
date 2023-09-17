@@ -4,6 +4,7 @@ import Header from './components/Header';
 import MoviesContainer from './components/MoviesContainer';
 import './components/MoviesContainer.css';
 import DescriptionCom from './components/DescriptionCom';
+import ReviewForm from './components/Reviews/ReviewForm';
 
 
 
@@ -12,8 +13,12 @@ function App() {
     <div>
       < Header />
       {/* < Gavels /> */}
+    
       {/* <MoviesContainer/> */}
-    <MoviesContainer/>
+      <ReviewForm/>
+      <br></br><br></br>
+      <br></br><br></br>
+      <DescriptionCom/>
        
     </div>
   )
