@@ -12,7 +12,7 @@ import ReactDOM from 'react-dom/client'
     const[handleClick, setHandleClick] = useState(false);
     const[handleHover, setHandleHover] = useState(false);
     const posterStyle = {border: "4px solid rgb(10,147,150)", radius:"8px", width: "214px", height: "300px", margin:"-10px", marginRight:"-12px", z:"20"};
-    // const length = {title}.length;
+
 
     return (
         <>

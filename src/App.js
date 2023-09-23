@@ -13,8 +13,7 @@ function App() {
     <div>
       < Header />
       {/* < Gavels /> */}
-    
-      {/* <MoviesContainer/> */}
+      {/* <MoviesContainer /> */}
       <ReviewForm/>
       <br></br><br></br>
       <br></br><br></br>

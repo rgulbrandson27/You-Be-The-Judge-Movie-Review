@@ -15,9 +15,7 @@ const ReviewForm = ({title}) => {
                 <h1>What's YOUR Opinion</h1>
             <form className="review-form">
                 <div className="rating-box">
-                    <p>dissent</p>
                 < Gavels className="gavel-box"/>
-                    <p>concur</p>
                 </div>
                 <label>Name</label>
                 <input type="text" placeholder="enter name" className="reviewComment" />
