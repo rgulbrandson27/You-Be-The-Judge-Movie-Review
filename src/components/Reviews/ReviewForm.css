@@ -13,6 +13,10 @@
     
 }
 
+.reviewComment {
+    height: 100px;
+    width: 300px;
+}
 .extra-div-for-style {
     align-self: center;
     display: flex;

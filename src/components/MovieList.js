@@ -2,6 +2,29 @@ import React from "react";
 import MovieComponent from './MovieComponent.js';
 
 /*
+
+1 - 12 Angry Men                    21 - Legally Blonde
+2 - Anatomy of a Murder             22 - Legally Blonde II
+3 - Bridge of Spies                 23 - Liar Liar
+4 - The Chamber                     24 - The Lincoln Lawyer
+5 - A Civil Action                  25 - My Cousin Vinny
+6 - The Client                      26 - The Mauritanian
+7 - A Cry in the Dark               27 - The Pelican Brief
+8 - Dark Waters                     28 - The People vs. Larry Flint
+9 - The Devil's Advocate            29 - Philadelphia
+10 - Erin Brock                     30 - Presumed Innocent
+11 - A Few Good Men                 31 - Primal Fear
+12 - The Firm                       32 - The Rainmaker
+13 - Fracture                       33 - Roman J. Israel, Esq.
+14 - In Cold Blood                  34 - Runaway Jury
+15 - In the Name of the Father      35 - A Time to Kill
+16 - The Insider                    36 - To Kill a Mockingbird
+17 - Just Cause                     37 - Trial by Jury
+18 - And Justice For All            38 - The Verdict
+19 - Judgment at Nuremberg          39 - The Whole Truth
+20 - Kramer vs. Kramer              40 - Witness for the Prosecution
+
+Additional to add:
  Red Corner 
  JFK
  Star Chamber
@@ -27,23 +50,21 @@ import MovieComponent from './MovieComponent.js';
  */
 
 
-
-
-  const movies = [
+const movies = [
     
-    {
-      "id": "1",
-      "imbd": "tt0050083",
-      "title": "12 Angry Men",
-      "year": "1957",
-      "rating": "PG",
-      "runtime": "96 min.",
-      "description": "The jury in a New York City murder trial is frustrated by a single member whose skeptical caution forces them to more carefully consider the evidence before jumping to a hasty verdict.",
-      "poster": "https://m.media-amazon.com/images/I/51wkw7SAntL._SX300_SY300_QL70_FMwebp_.jpg",
-      "link": "https://www.imdb.com/title/tt0050083/"
+  {
+    "id": "1",
+    "imbd": "tt0050083",
+    "title": "12 Angry Men",
+    "year": "1957",
+    "rating": "PG",
+    "runtime": "96 min.",
+    "description": "The jury in a New York City murder trial is frustrated by a single member whose skeptical caution forces them to more carefully consider the evidence before jumping to a hasty verdict.",
+    "poster": "https://m.media-amazon.com/images/I/51wkw7SAntL._SX300_SY300_QL70_FMwebp_.jpg",
+    "link": "https://www.imdb.com/title/tt0050083/"
   },
 
-  {
+    {
     "id": "2",
     "imbd": "tt0052561",
     "title": "Anatomy of a Murder",
@@ -53,8 +74,9 @@ import MovieComponent from './MovieComponent.js';
     "description": "An upstate Michigan lawyer defends a soldier who claims he killed an innkeeper due to temporary insanity after the victim raped his wife. What is the truth, and will he win his case?",
     "poster": "https://m.media-amazon.com/images/I/51BYIh9ntUL.__AC_SX300_SY300_QL70_FMwebp_.jpg",
     "link": "https://www.imdb.com/title/tt0052561/?ref_=tt_mv_close",
-    "reviews": [{rating:"", author:"", review:""}, {rating:4.5, author:"", review:""}],
-    "ratings-count": null,
+    "reviews": [{rating:"", author:"", review:""}],
+    "ratingsList": "[]",
+    "ratings-count": "0",
     "average-rating": null
 },
 
@@ -70,19 +92,19 @@ import MovieComponent from './MovieComponent.js';
   "link": "https://www.imdb.com/title/tt3682448/"
 },
 
-    {
-        "id": "1",
-        "imbd": "tt0115862",
-        "title": "The Chamber",
-        "year": "1996",
-        "rating": "R",
-        "runtime": "113 min.",
-        "description": "A young man fresh out of law school tries to win a reprieve for his racist grandfather who is on death row.",
-        "poster": "https://m.media-amazon.com/images/I/51Eom-OzFrL.jpg",
-        "link": "https://www.imdb.com/title/tt0115862/?ref_=fn_al_tt_2"
+{
+    "id": "1",
+      "imbd": "tt0115862",
+      "title": "The Chamber",
+      "year": "1996",
+      "rating": "R",
+      "runtime": "113 min.",
+      "description": "A young man fresh out of law school tries to win a reprieve for his racist grandfather who is on death row.",
+      "poster": "https://m.media-amazon.com/images/I/51Eom-OzFrL.jpg",
+      "link": "https://www.imdb.com/title/tt0115862/?ref_=fn_al_tt_2"
     },
 
-
+// 5
     
     {
         "id": "2",
@@ -144,27 +166,29 @@ import MovieComponent from './MovieComponent.js';
     "link": "https://www.imdb.com/title/tt0104257"
 },
 
+// 10
+
     {
-      "id": "4",
-      "imbd": "tt0250494",
-      "title": "Erin Brock",
-      "year": "2001",
-      "rating": "PG-13",
-      "runtime": "96 min.",
-      "description": "Elle Woods, a fashionable sorority queen, is dumped by her boyfriend. She decides to follow him to law school. While she is there, she figures out that there is more to her than just looks.",
-      "poster": "https://www.imdb.com/title/tt0250494/?ref_=fn_al_tt_1",
-      "link": "https://www.imdb.com/title/tt0104257"
+      "id": "9",
+      "imbd": "tt0195685",
+      "title": "Erin Brockovich",
+      "year": "2000",
+      "rating": "R",
+      "runtime": "131 min.",
+      "description": "An unemployed single mother becomes a legal assistant and almost single-handedly brings down a California power company accused of polluting a city's water supply.",
+      "poster": "https://m.media-amazon.com/images/I/716l8iT-UJS.__AC_SX300_SY300_QL70_FMwebp_.jpg",
+      "link": "https://www.imdb.com/title/tt0195685/"
   },
     {
-        "id": "4",
-        "imbd": "tt0250494",
+        "id": "10",
+        "imbd": "tt0104257",
         "title": "A Few Good Men",
-        "year": "2001",
-        "rating": "PG-13",
-        "runtime": "96 min.",
-        "description": "Elle Woods, a fashionable sorority queen, is dumped by her boyfriend. She decides to follow him to law school. While she is there, she figures out that there is more to her than just looks.",
-        "poster": "https://www.imdb.com/title/tt0250494/?ref_=fn_al_tt_1",
-        "link": "https://www.imdb.com/title/tt0104257"
+        "year": "1992",
+        "rating": "R",
+        "runtime": "138 min.",
+        "description": "Military lawyer Lieutenant Daniel Kaffee defends Marines accused of murder. They contend they were acting under orders.",
+        "poster": "https://m.media-amazon.com/images/I/517uQhvmwFL.__AC_SX300_SY300_QL70_FMwebp_.jpg",
+        "link": "https://www.imdb.com/title/tt0104257/"
     },
 
     {
@@ -202,6 +226,8 @@ import MovieComponent from './MovieComponent.js';
     "poster": "https://www.imdb.com/title/tt0250494/?ref_=fn_al_tt_1",
     "link": "https://www.imdb.com/title/tt0104257"
 },
+
+// 15
 
 {
   "id": "4",
@@ -305,7 +331,7 @@ import MovieComponent from './MovieComponent.js';
       "rating": "PG-13",
       "runtime": "96 min.",
       "description": "Elle Woods, a fashionable sorority queen, is dumped by her boyfriend. She decides to follow him to law school. While she is there, she figures out that there is more to her than just looks.",
-      "poster": "https://www.imdb.com/title/tt0250494/?ref_=fn_al_tt_1",
+      "poster": "https://m.media-amazon.com/images/I/41y8mKybnHL._AC_.jpg",
       "link": "https://www.imdb.com/title/tt0104257"
   },
 
@@ -502,7 +528,7 @@ import MovieComponent from './MovieComponent.js';
 },
 
   {
-    "id": "4",
+    "id": "40",
     "imbd": "tt0250494",
     "title": "Witness for the Prosecution",
     "year": "2001",

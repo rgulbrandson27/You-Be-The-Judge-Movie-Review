@@ -10,8 +10,6 @@ const Header = () => {
         <h1 id="page-title">You Be The Judge</h1>
         </div>
       </div>
-
-
 );
 }
 

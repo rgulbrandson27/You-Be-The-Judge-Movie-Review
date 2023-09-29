@@ -13,12 +13,12 @@ function App() {
     <div>
       < Header />
       {/* < Gavels /> */}
-      {/* <MoviesContainer /> */}
-      <ReviewForm/>
-      <br></br><br></br>
-      <br></br><br></br>
-      <DescriptionCom/>
-       
+
+
+  
+      {/* <DescriptionCom/> */}
+      {/* <ReviewForm/> */}
+      < MoviesContainer />
     </div>
   )
 }

@@ -17,16 +17,16 @@ const ReviewForm = ({title}) => {
                 <div className="rating-box">
                 < Gavels className="gavel-box"/>
                 </div>
-                <label>Name</label>
-                <input type="text" placeholder="enter name" className="reviewComment" />
+                <label>Name
+                    <input type="text" placeholder="enter name" className="reviewComment" />
+                    </label>
                 <label>Opinion</label>
                 <input type="text" placeholder="enter comments" className="reviewComment" />
                 <button className="submit-review" >Publish</button>
                 <table>
-                    <thead>
-                        <tr>Reviews</tr>
-                    </thead>
+                   
                 </table>
+                <input type="text" placeholder="dd" />
             </form>
             </div>
         </div>
