@@ -11,12 +11,11 @@
     background-color: #534c4b;
     margin-top: 25px;
     
+    margin-left: 100px;
+
+
 }
 
-.reviewComment {
-    height: 100px;
-    width: 300px;
-}
 .extra-div-for-style {
     align-self: center;
     display: flex;
@@ -55,7 +54,9 @@
     flex-direction: column;
 }
 
-
+.submit-button {
+    margin-top: 20px;
+}
 
 /* 
  Y overflow

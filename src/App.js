@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.css';
 import Header from './components/Header';
 import MoviesContainer from './components/MoviesContainer';
@@ -11,14 +11,14 @@ import ReviewForm from './components/Reviews/ReviewForm';
 function App() {
   return (
     <div>
-      < Header />
+      {/* < Header /> */}
       {/* < Gavels /> */}
 
 
   
       {/* <DescriptionCom/> */}
-      {/* <ReviewForm/> */}
-      < MoviesContainer />
+      <ReviewForm/>
+      {/* < MoviesContainer /> */}
     </div>
   )
 }
