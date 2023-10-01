@@ -85,6 +85,17 @@
     grid-area: link;
     /* text-decoration: underline; */
     margin-top: 4px;
+    color: white;
+    text-decoration-color: white;
+    text-transform: white;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: lightgray;
 }
 
 .year {
@@ -149,11 +160,12 @@
     align-self: top;
     justify-self: center;
     font-size: .8rem;
-    font-weight: bolder;
+    /* font-weight: bolder; */
     padding: 0;
     margin-top: 0;
-    margin-bottom: .5rem;
-    margin-left: .6rem;
+    margin-bottom: .3rem;
+    margin-left: .2rem;
+    margin-right: 0;
     z-index: 2;
 }
 

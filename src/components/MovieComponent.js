@@ -5,9 +5,10 @@ import Scale from './Images/Scale.png';
 import NewViewWhite from './Images/NewViewWhite.png';
 import DescriptionCom from './DescriptionCom.js';
 import reactDOM from 'react';
-import ReactDOM from 'react-dom/client'
+import ReactDOM from 'react-dom/client';
 
-    const MovieComponent = ({ title, poster, description, year, rating, runtime, imbd, count, average}) => {
+
+    const MovieComponent = ({ title, poster, description, year, rating, runtime, link, count, average}) => {
 
     const[handleClick, setHandleClick] = useState(false);
     const[handleHover, setHandleHover] = useState(false);
@@ -30,7 +31,10 @@ import ReactDOM from 'react-dom/client'
                     <h2 className="title">{title}</h2>
                         <img className="reel" src={NewViewWhite}
                             onClick = {e => setHandleClick(true)}/>
-                    <p className="link">imbd: {imbd}</p>
+                    <p className="link">    
+                        <a href={link} target="_blank">go to IMBd</a>
+                    </p>
+
                     <p className="year">{year}</p>
                     <p className="rating">{rating}</p>
                     <p className="minutes">{runtime}</p>                    

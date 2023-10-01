@@ -11,14 +11,14 @@ import ReviewForm from './components/Reviews/ReviewForm';
 function App() {
   return (
     <div>
-      {/* < Header /> */}
+      < Header />
       {/* < Gavels /> */}
 
 
   
       {/* <DescriptionCom/> */}
       <ReviewForm/>
-      {/* < MoviesContainer /> */}
+      < MoviesContainer />
     </div>
   )
 }

@@ -93,7 +93,7 @@ const movies = [
 },
 
 {
-    "id": "1",
+    "id": "4",
       "imbd": "tt0115862",
       "title": "The Chamber",
       "year": "1996",
@@ -107,7 +107,7 @@ const movies = [
 // 5
     
     {
-        "id": "2",
+        "id": "5",
         "imbd": "tt0120633",
         "title": "A Civil Action",
         "year": "1993",
@@ -119,7 +119,7 @@ const movies = [
     },
 
     {
-        "id": "3",
+        "id": "6",
         "imbd": "tt",
         "title": "The Client",
         "year": "1994",
@@ -131,19 +131,19 @@ const movies = [
     },
 
     {
-      "id": "4",
-      "imbd": "tt0250494",
+      "id": "7",
+      "imbd": "tt0094924",
       "title": "A Cry in the Dark",
-      "year": "2001",
+      "year": "1988",
       "rating": "PG-13",
-      "runtime": "96 min.",
-      "description": "Elle Woods, a fashionable sorority queen, is dumped by her boyfriend. She decides to follow him to law school. While she is there, she figures out that there is more to her than just looks.",
-      "poster": "https://www.imdb.com/title/tt0250494/?ref_=fn_al_tt_1",
-      "link": "https://www.imdb.com/title/tt0104257"
+      "runtime": "120 min.",
+      "description": "A mother whose child was killed in a dingo attack in the Australian Outback fights to prove her innocence when she is accused of murder.",
+      "poster": "https://m.media-amazon.com/images/I/51ZRrLM3mtL.__AC_SX342_SY445_QL70_FMwebp_.jpg",
+      "link": "https://www.imdb.com/title/tt0094924/"
   },
 
   {
-    "id": "4",
+    "id": "8",
     "imbd": "tt9071322",
     "title": "Dark Waters",
     "year": "2019",
@@ -155,21 +155,21 @@ const movies = [
 },
 
   {
-    "id": "4",
-    "imbd": "tt0250494",
+    "id": "9",
+    "imbd": "tt0118971",
     "title": "The Devil's Advocate",
-    "year": "2001",
-    "rating": "PG-13",
-    "runtime": "96 min.",
-    "description": "Elle Woods, a fashionable sorority queen, is dumped by her boyfriend. She decides to follow him to law school. While she is there, she figures out that there is more to her than just looks.",
-    "poster": "https://www.imdb.com/title/tt0250494/?ref_=fn_al_tt_1",
-    "link": "https://www.imdb.com/title/tt0104257"
+    "year": "1997",
+    "rating": "R",
+    "runtime": "144 min.",
+    "description": "An exceptionally-adept Florida lawyer is offered a job at a high-end New York City law firm with a high-end boss--the biggest opportunity of his career to date.",
+    "poster": "https://m.media-amazon.com/images/I/81zHU61rn-L._SY500_.jpg",
+    "link": "https://www.imdb.com/title/tt0118971/"
 },
 
 // 10
 
     {
-      "id": "9",
+      "id": "10",
       "imbd": "tt0195685",
       "title": "Erin Brockovich",
       "year": "2000",
@@ -180,7 +180,7 @@ const movies = [
       "link": "https://www.imdb.com/title/tt0195685/"
   },
     {
-        "id": "10",
+        "id": "11",
         "imbd": "tt0104257",
         "title": "A Few Good Men",
         "year": "1992",
@@ -192,53 +192,53 @@ const movies = [
     },
 
     {
-      "id": "4",
-      "imbd": "tt0250494",
+      "id": "12",
+      "imbd": "tt0106918",
       "title": "The Firm",
-      "year": "2001",
-      "rating": "PG-13",
-      "runtime": "96 min.",
-      "description": "Elle Woods, a fashionable sorority queen, is dumped by her boyfriend. She decides to follow him to law school. While she is there, she figures out that there is more to her than just looks.",
-      "poster": "https://www.imdb.com/title/tt0250494/?ref_=fn_al_tt_1",
-      "link": "https://www.imdb.com/title/tt0104257"
+      "year": "1993",
+      "rating": "R",
+      "runtime": "154 min.",
+      "description": "A young lawyer joins a prestigious law firm only to discover that it has a sinister dark side.",
+      "poster": "https://m.media-amazon.com/images/I/519qrkzSt0L._AC_.jpg",
+      "link": "https://www.imdb.com/title/tt0106918/"
   },
 
   {
-    "id": "4",
-    "imbd": "tt0250494",
+    "id": "13",
+    "imbd": "tt0488120",
     "title": "Fracture",
     "year": "2007",
-    "rating": "PG-13",
-    "runtime": "96 min.",
-    "description": "Elle Woods, a fashionable sorority queen, is dumped by her boyfriend. She decides to follow him to law school. While she is there, she figures out that there is more to her than just looks.",
-    "poster": "https://www.imdb.com/title/tt0250494/?ref_=fn_al_tt_1",
-    "link": "https://www.imdb.com/title/tt0104257"
+    "rating": "R",
+    "runtime": "113 min.",
+    "description": "An attorney intending on climbing the career ladder toward success finds an unlikely opponent in a manipulative criminal he is trying to prosecute.",
+    "poster": "https://m.media-amazon.com/images/I/418F7FqAOlL.__AC_SX300_SY300_QL70_FMwebp_.jpg",
+    "link": "https://www.imdb.com/title/tt0488120/"
 },
 
   {
-    "id": "4",
-    "imbd": "tt0250494",
+    "id": "14",
+    "imbd": "tt0104257",
     "title": "In Cold Blood",
-    "year": "2001",
-    "rating": "PG-13",
-    "runtime": "96 min.",
-    "description": "Elle Woods, a fashionable sorority queen, is dumped by her boyfriend. She decides to follow him to law school. While she is there, she figures out that there is more to her than just looks.",
-    "poster": "https://www.imdb.com/title/tt0250494/?ref_=fn_al_tt_1",
+    "year": "1967",
+    "rating": "R",
+    "runtime": "134 min.",
+    "description": "Two ex-cons murder a family in a robbery attempt, before going on the run from the authorities. The police try to piece together the details of the murder in an attempt to track down the killers.",
+    "poster": "https://m.media-amazon.com/images/I/41DlS9JFJoL._AC_.jpg",
     "link": "https://www.imdb.com/title/tt0104257"
 },
 
 // 15
 
 {
-  "id": "4",
-  "imbd": "tt0250494",
+  "id": "15",
+  "imbd": "tt0107207",
   "title": "In the Name of the Father",
-  "year": "2001",
-  "rating": "PG-13",
-  "runtime": "96 min.",
-  "description": "Elle Woods, a fashionable sorority queen, is dumped by her boyfriend. She decides to follow him to law school. While she is there, she figures out that there is more to her than just looks.",
-  "poster": "https://www.imdb.com/title/tt0250494/?ref_=fn_al_tt_1",
-  "link": "https://www.imdb.com/title/tt0104257"
+  "year": "1993",
+  "rating": "R",
+  "runtime": "133 min.",
+  "description": "A man's coerced confession to an I.R.A. bombing he did not commit results in the imprisonment of his father as well. An English lawyer fights to free them.",
+  "poster": "https://m.media-amazon.com/images/I/61aSC5SzTtL._AC_SL1337_.jpg",
+  "link": "https://www.imdb.com/title/tt0107207/"
 },
 
 {
