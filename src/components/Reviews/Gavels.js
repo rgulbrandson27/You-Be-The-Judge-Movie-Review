@@ -6,8 +6,10 @@ import { ReactDOM } from 'react';
 
 const Gavels = () => {
     const [ratingsList, setRatingsList] = useState([7, 3]);
-    const [ratingDisplay, setRatingDisplay] = useState("Your Rating")
-   
+    const [ratingDisplay, setRatingDisplay] = useState("Your Rating");
+    // const [hoverState, setHoverState] = useState(false);
+    const backgroundGavelStyle = {clipPath: '(polygon(0 50%, 60% 70%, 80% 100%, 0 100%)', filter: 'dropShadow (2px, 2px, 2px, black)'};
+
     return (
         <>
         <p className="chosen-rating">{ratingDisplay}</p>
@@ -17,7 +19,7 @@ const Gavels = () => {
                     <input type="radio" id="gavel-1" name="gavel" value="1" ></input>  
                     <label htmlFor="gavel-1"><img className="gavel-light gavel-f gavel-1" src={Gavel} 
                         onClick={() => setRatingsList([...ratingsList, 1])}
-                        onMouseOver={() => setRatingDisplay("1.0")}/> </label>
+                        onMouseOver={() => setRatingDisplay("1.0")}/></label>
 
                     <input type="radio" id="gavel-3" name="gavel" value="2" ></input>
                     <label htmlFor="gavel-3"><img className="gavel-light gavel-f gavel-3" src={Gavel} 
@@ -44,7 +46,7 @@ const Gavels = () => {
                     <input type="radio" id="gavel-1" name="gavel" value="1" ></input>  
                     <label htmlFor="gavel-1"><img className="gavel-light gavel-b gavel-1" src={Gavel} 
                         onClick={() => setRatingsList([...ratingsList, 1])}
-                        onMouseOver={() => setRatingDisplay("1.0")}/> </label>
+                        onMouseOver={() => [setRatingDisplay("1.0"), {backgroundGavelStyle}]}/> </label>
 
                     <input type="radio" id="gavel-3" name="gavel" value="2" ></input>
                     <label htmlFor="gavel-3"><img className="gavel-light gavel-b gavel-3" src={Gavel} 
@@ -67,13 +69,13 @@ const Gavels = () => {
                             onMouseOver={() => setRatingDisplay("5.0")}/></label>
                 </div>
 
-                    <div className="dark-gavels-container">
+                    {/* <div className="dark-gavels-container">
                         <img className="gavel gavel-dark gavel-2" src={GavelDark}/>
                         <img className="gavel gavel-dark gavel-4" src={GavelDark}/>
                         <img className="gavel gavel-dark gavel-6" src={GavelDark}/>
                         <img className="gavel gavel-dark gavel-8" src={GavelDark}/>                           
                         <img className="gavel gavel-dark gavel-10" src={GavelDark}/>                          
-                    </div>
+                    </div> */}
                 <p>concur</p>
             </div>
         </>

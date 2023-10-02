@@ -6,13 +6,24 @@ import NewViewWhite from './Images/NewViewWhite.png';
 import DescriptionCom from './DescriptionCom.js';
 import reactDOM from 'react';
 import ReactDOM from 'react-dom/client';
+import ReviewForm from './Reviews/ReviewForm.js';
 
 
     const MovieComponent = ({ title, poster, description, year, rating, runtime, link, count, average}) => {
 
     const[handleClick, setHandleClick] = useState(false);
     const[handleHover, setHandleHover] = useState(false);
+    // const[handleReviewClick, setHandleReviewClick] = useState (false);
     const posterStyle = {border: "4px solid rgb(10,147,150)", radius:"8px", width: "214px", height: "300px", margin:"-10px", marginRight:"-12px", z:"20"};
+    
+    // function handleReviewClick(e) {
+    //     if (handleReviewClick === true) {
+    //         <ReviewForm className="review-form" setHandleReviewClick={setHandleReviewClick} title={title}></ReviewForm>
+    //     }
+
+    function handleReviewClick() {
+     <ReviewForm className="reviewFormShow" title={title} ></ReviewForm>
+    }
 
 
     return (
@@ -40,8 +51,9 @@ import ReactDOM from 'react-dom/client';
                     <p className="minutes">{runtime}</p>                    
                     <div className="review-box"></div>
                         <img className="scale" src={Scale}/>
-                        <p className="count">{count} Reviews</p>
-                        <p className="review">Leave a Review</p>
+                        <p className="count" >{count} Reviews</p>
+                        <p className="review"  
+                            onClick = {e => handleReviewClick}>Leave a Review</p>
                         <p className="score">{average} / 5.0</p>
                     <div/>
                 </div>
@@ -50,7 +62,7 @@ import ReactDOM from 'react-dom/client';
         </>
         );
     }
-
+    
 export default MovieComponent;
 
 

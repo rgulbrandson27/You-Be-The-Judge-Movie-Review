@@ -52,7 +52,7 @@ Additional to add:
 
 const movies = [
     
-  {
+    {
     "id": "1",
     "imbd": "tt0050083",
     "title": "12 Angry Men",
@@ -78,10 +78,10 @@ const movies = [
     "ratingsList": "[]",
     "ratings-count": "0",
     "average-rating": null
-},
+  },
 
-{
-  "id": "4",
+  {
+  "id": "3",
   "imbd": "tt0250494",
   "title": "Bridge of Spies",
   "year": "2001",
@@ -92,7 +92,7 @@ const movies = [
   "link": "https://www.imdb.com/title/tt3682448/"
 },
 
-{
+  {
     "id": "4",
       "imbd": "tt0115862",
       "title": "The Chamber",
@@ -103,20 +103,18 @@ const movies = [
       "poster": "https://m.media-amazon.com/images/I/51Eom-OzFrL.jpg",
       "link": "https://www.imdb.com/title/tt0115862/?ref_=fn_al_tt_2"
     },
-
-// 5
     
     {
-        "id": "5",
-        "imbd": "tt0120633",
-        "title": "A Civil Action",
-        "year": "1993",
-        "rating": "PG-13",
-        "runtime": "115 min.",
-        "description": "A tenacious lawyer takes on a case involving two companies responsible for causing several children to be diagnosed with leukemia due to the town's water supply being contaminated, at the risk of bankrupting his firm and career.",
-        "poster": "https://m.media-amazon.com/images/M/MV5BZmEzNjhiZWEtNTM5OS00ZmQyLThhYjEtNjY4ZDZhOGFkMzI4XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg",
-        "link": "https://www.imdb.com/title/tt0120633/?ref_=fn_al_tt_1"
-    },
+      "id": "5",
+      "imbd": "tt0120633",
+      "title": "A Civil Action",
+      "year": "1993",
+      "rating": "PG-13",
+      "runtime": "115 min.",
+      "description": "A tenacious lawyer takes on a case involving two companies responsible for causing several children to be diagnosed with leukemia due to the town's water supply being contaminated, at the risk of bankrupting his firm and career.",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZmEzNjhiZWEtNTM5OS00ZmQyLThhYjEtNjY4ZDZhOGFkMzI4XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg",
+      "link": "https://www.imdb.com/title/tt0120633/?ref_=fn_al_tt_1"
+  },
 
     {
         "id": "6",
@@ -166,8 +164,6 @@ const movies = [
     "link": "https://www.imdb.com/title/tt0118971/"
 },
 
-// 10
-
     {
       "id": "10",
       "imbd": "tt0195685",
@@ -179,17 +175,20 @@ const movies = [
       "poster": "https://m.media-amazon.com/images/I/716l8iT-UJS.__AC_SX300_SY300_QL70_FMwebp_.jpg",
       "link": "https://www.imdb.com/title/tt0195685/"
   },
-    {
-        "id": "11",
-        "imbd": "tt0104257",
-        "title": "A Few Good Men",
-        "year": "1992",
-        "rating": "R",
-        "runtime": "138 min.",
-        "description": "Military lawyer Lieutenant Daniel Kaffee defends Marines accused of murder. They contend they were acting under orders.",
-        "poster": "https://m.media-amazon.com/images/I/517uQhvmwFL.__AC_SX300_SY300_QL70_FMwebp_.jpg",
-        "link": "https://www.imdb.com/title/tt0104257/"
-    },
+
+/////////////// ---11---
+
+      {
+      "id": "11",
+      "imbd": "tt0104257",
+      "title": "A Few Good Men",
+      "year": "1992",
+      "rating": "R",
+      "runtime": "138 min.",
+      "description": "Military lawyer Lieutenant Daniel Kaffee defends Marines accused of murder. They contend they were acting under orders.",
+      "poster": "https://m.media-amazon.com/images/I/517uQhvmwFL.__AC_SX300_SY300_QL70_FMwebp_.jpg",
+      "link": "https://www.imdb.com/title/tt0104257/"
+  },
 
     {
       "id": "12",
@@ -227,8 +226,6 @@ const movies = [
     "link": "https://www.imdb.com/title/tt0104257"
 },
 
-// 15
-
 {
   "id": "15",
   "imbd": "tt0107207",
@@ -242,66 +239,71 @@ const movies = [
 },
 
 {
-  "id": "4",
-  "imbd": "tt0250494",
+  "id": "16",
+  "imbd": "tt0140352",
   "title": "The Insider",
   "year": "1999",
-  "rating": "PG-13",
-  "runtime": "96 min.",
-  "description": "Elle Woods, a fashionable sorority queen, is dumped by her boyfriend. She decides to follow him to law school. While she is there, she figures out that there is more to her than just looks.",
-  "poster": "https://www.imdb.com/title/tt0250494/?ref_=fn_al_tt_1",
-  "link": "https://www.imdb.com/title/tt0104257"
+  "rating": "R",
+  "runtime": "157 min.",
+  "description": "A research chemist comes under personal and professional attack when he decides to appear in a 60 Minutes exposé on Big Tobacco.",
+  "poster": "https://m.media-amazon.com/images/I/51f4bgoWuML._AC_.jpg",
+  "link": "https://www.imdb.com/title/tt0140352/"
 },
 
 {
-  "id": "4",
-  "imbd": "tt0250494",
+  "id": "17",
+  "imbd": "tt0113501",
   "title": "Just Cause",
-  "year": "2001",
-  "rating": "PG-13",
-  "runtime": "96 min.",
-  "description": "Elle Woods, a fashionable sorority queen, is dumped by her boyfriend. She decides to follow him to law school. While she is there, she figures out that there is more to her than just looks.",
-  "poster": "https://www.imdb.com/title/tt0250494/?ref_=fn_al_tt_1",
-  "link": "https://www.imdb.com/title/tt0104257"
+  "year": "1995",
+  "rating": "R",
+  "runtime": "102 min.",
+  "description": "A Harvard professor is lured back into the courtroom after twenty-five years to take the case of a young black man condemned to death for the horrific murder of a child.",
+  "poster": "https://m.media-amazon.com/images/I/410pC9T24vL._AC_.jpg",
+  "link": "https://www.imdb.com/title/tt0113501/"
 },
 
 {
-  "id": "4",
-  "imbd": "tt0250494",
+  "id": "18",
+  "imbd": "tt0078718",
   "title": "And Justice for All",
-  "year": "2001",
-  "rating": "PG-13",
-  "runtime": "96 min.",
-  "description": "Elle Woods, a fashionable sorority queen, is dumped by her boyfriend. She decides to follow him to law school. While she is there, she figures out that there is more to her than just looks.",
-  "poster": "https://www.imdb.com/title/tt0250494/?ref_=fn_al_tt_1",
-  "link": "https://www.imdb.com/title/tt0104257"
+  "year": "1979",
+  "rating": "R",
+  "runtime": "119 min.",
+  "description": "A lawyer is forced to defend a guilty judge, while defending other innocent clients, and trying to find punishment for the guilty and provide justice for the innocent.",
+  "poster": "https://m.media-amazon.com/images/I/61tYVEXnARL._AC_SY879_.jpg",
+  "link": "https://www.imdb.com/title/tt0078718/"
 },
+
   {
-    "id": "4",
-    "imbd": "tt0250494",
+    "id": "19",
+    "imbd": "tt0055031",
     "title": "Judgment at Nuremberg",
-    "year": "2001",
-    "rating": "PG-13",
-    "runtime": "96 min.",
-    "description": "Elle Woods, a fashionable sorority queen, is dumped by her boyfriend. She decides to follow him to law school. While she is there, she figures out that there is more to her than just looks.",
-    "poster": "https://www.imdb.com/title/tt0250494/?ref_=fn_al_tt_1",
-    "link": "https://www.imdb.com/title/tt0104257"
+    "year": "1961",
+    "rating": "Approved",
+    "runtime": "179 min.",
+    "description": "In 1948, an American court in occupied Germany tries four Nazis judged for war crimes.",
+    "poster": "https://m.media-amazon.com/images/I/81I1oYUQHZL._SY500_.jpg",
+    "link": "https://www.imdb.com/title/tt0055031/"
 },
 
 {
-  "id": "4",
-  "imbd": "tt0250494",
+  "id": "20",
+  "imbd": "tt0079417",
   "title": "Kramer vs. Kramer",
-  "year": "2001",
-  "rating": "PG-13",
-  "runtime": "96 min.",
-  "description": "Elle Woods, a fashionable sorority queen, is dumped by her boyfriend. She decides to follow him to law school. While she is there, she figures out that there is more to her than just looks.",
-  "poster": "https://www.imdb.com/title/tt0250494/?ref_=fn_al_tt_1",
-  "link": "https://www.imdb.com/title/tt0104257"
+  "year": "1979",
+  "rating": "PG",
+  "runtime": "105.",
+  "description": "After his wife leaves him, a work-obsessed Manhattan advertising executive is forced to learn long-neglected parenting skills, but a heated custody battle over the couple's young son deepens the wounds left by the separation.",
+  "poster": "https://m.media-amazon.com/images/I/41UqjuolJyL._SX300_SY300_QL70_FMwebp_.jpg",
+  "link": "https://www.imdb.com/title/tt0079417/plotsummary/?ref_=tt_ov_pl"
 },
+
+
+/////////////// ---21---
+
 
     {
-        "id": "5",
+        "id": "",
         "imbd": "tt0250494",
         "title": "Legally Blonde",
         "year": "2001",
