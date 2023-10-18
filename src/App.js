@@ -17,7 +17,7 @@ function App() {
 
   
       {/* <DescriptionCom/> */}
-      <ReviewForm/>
+      {/* <ReviewForm/> */}
       < MoviesContainer />
     </div>
   )

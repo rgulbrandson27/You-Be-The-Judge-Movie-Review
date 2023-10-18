@@ -13,7 +13,7 @@ import ReviewForm from './Reviews/ReviewForm.js';
 
     const[handleClick, setHandleClick] = useState(false);
     const[handleHover, setHandleHover] = useState(false);
-    // const[handleReviewClick, setHandleReviewClick] = useState (false);
+    const[handleReviewClick, setHandleReviewClick] = useState (false);
     const posterStyle = {border: "4px solid rgb(10,147,150)", radius:"8px", width: "214px", height: "300px", margin:"-10px", marginRight:"-12px", z:"20"};
     
     // function handleReviewClick(e) {
@@ -21,13 +21,14 @@ import ReviewForm from './Reviews/ReviewForm.js';
     //         <ReviewForm className="review-form" setHandleReviewClick={setHandleReviewClick} title={title}></ReviewForm>
     //     }
 
-    function handleReviewClick() {
-     <ReviewForm className="reviewFormShow" title={title} ></ReviewForm>
-    }
+    // function handleReviewClick() {
+    //  <ReviewForm className="reviewFormShow" title={title} ></ReviewForm>
+    // }
 
 
     return (
         <>
+
             {handleClick ?  <DescriptionCom className="description" setHandleClick={setHandleClick} title={title} description={description}></DescriptionCom>  
             : <div className="movie">
                 <div className="poster-area"     
@@ -53,7 +54,8 @@ import ReviewForm from './Reviews/ReviewForm.js';
                         <img className="scale" src={Scale}/>
                         <p className="count" >{count} Reviews</p>
                         <p className="review"  
-                            onClick = {e => handleReviewClick}>Leave a Review</p>
+                            onClick = {e => setHandleReviewClick(true)}>Leave a Review</p>
+                        {handleReviewClick && <ReviewForm className="review-form" title={title}>   </ReviewForm>}
                         <p className="score">{average} / 5.0</p>
                     <div/>
                 </div>

@@ -1,4 +1,4 @@
-.chosen-rating {
+.selected-rating {
     display: flex;
     font-size: 24px;
     justify-content: center;
@@ -11,37 +11,9 @@
     height: 100px;
     display: flex;
     justify-content: center;
-    /* border: solid 2px blue; */
     align-items: center;
     margin-top: -5px;
 }
-
-.light-gavels-container {
-    display: flex;
-    justify-content: center;
-    height: 50px;
-    width: 210px;
-    align-items: center;
-    /* transition: color .2s, transform .2s; */
-    position: relative;
-}
-
-.background-gavels {
-    margin-left: -210px;
-    display: flex;
-    justify-content: center;
-    height: 50px;
-    width: 210px;
-    align-items: center;
-    /* transition: color .2s, transform .2s; */
-    position: relative;
-    /* display: none; */
-    z-index: -1;
-}
-
-/* .background-gavels > .gavel-b:hover {
-    filter: drop-shadow(2px 2px 2px black);
-} */
 
 p {
     margin: 16px;
@@ -49,163 +21,79 @@ p {
     font-size: 13px;
 }
 
-
-
-.gavel-f {
-    height: 44px;
-    width: 44px;
-    align-items: center;
-    padding-bottom: 1px;
-    padding-top: 1px;
-    margin-right: -1;
-    margin-left: -1;
-    position: relative;
-
-}
-
-.gavel-b {
-    height: 44px;
-    width: 44px;
-    align-items: center;
-    padding-bottom: 1px;
-    padding-top: 1px;
-    margin-right: -1;
-    margin-left: -1;
-    position: relative;
-    clip-path:polygon(0 50%, 60% 70%, 80% 100%, 0 100%);
-    /* filter: drop-shadow(2px 2px 2px black); */
-   
-    /* clip-path:polygon(0 0, 100% 0, 100% 75%, 50% 68%, 0 50%, 0% 50%) */
-    /* display: none; */
-
-    /* clip-path:polygon(0 0, 100% 0, 100% 75%, 50% 68%, 0 50%, 0% 50%) */
-}
-
-    /* clip-path:polygon(0 50%, 60% 70%, 80% 100%, 0 100%);      
-    clip-path:polygon(0 0, 100% 0, 100% 75%, 50% 68%, 0 50%, 0% 50%);  */
-    /* transform:translateX(45%); */
-    /* display: none; 
-    box shadow will apply to whole box   
-    is there a way to do an image shadow because text-shadow doesn't work*/
-
-/* .gavel-b {
-    clip-path:polygon(0 0, 100% 0, 100% 75%, 50% 68%, 0 50%, 0% 50%); 
-} */
-
-/* gavel-f {
-    clip-path:polygon(0 0, 100% 0, 100% 75%, 50% 68%, 0 50%, 0% 50%); 
-    filter: drop-shadow(2px 2px 2px black);
-} */
-
-/* .gavel-b:hover { */
-    /* clip-path:polygon(0 0, 100% 0, 100% 75%, 50% 68%, 0 50%, 0% 50%); */
-    /* filter: drop-shadow(2px 2px 2px black);
-} */
-
-.gavel-f:hover {
-    filter: drop-shadow(2px 2px 2px black);
-    clip-path:polygon(0 0, 100% 0, 100% 75%, 50% 68%, 0 50%, 0% 50%);  
-    transform: rotate(-12deg);
-    transform-origin: bottom right; 
-} 
-.gavel-b:hover  {
-    filter: drop-shadow(2px 2px 2px black);
-}
-    /* clip-path:polygon(0 0, 100% 0, 100% 75%, 50% 68%, 0 50%, 0% 50%); 
-    
-    transform: rotate(-12deg);
-    transform-origin: bottom right;
-} */
-
-/* .gavel-b {
-    --clipped-image: clip-path:polygon(0 50%, 60% 70%, 80% 100%, 0 100%); 
-} */
-
-/* .gavel-b:hover {
-
-clip-path:polygon(0 0, 100% 0, 100% 75%, 50% 68%, 0 50%, 0% 50%); 
-clip-path:polygon(0 50%, 60% 70%, 80% 100%, 0 100%); 
-filter: drop-shadow(2px 2px 2px black);
-} */
-
-
 input[type="radio"] {
     display:none;
 }
 
 
-
-/* #0A9396 */
-    /* .gavel-dark {
-    display: flex;
-    height: 74px;
-    width: 74px;
-    position: relative; */
-    
-    /* padding-right: -16px;
-    padding-left: -16px;
-    margin-left:-16px;
-    margin-right:-16px;   */
-    /* display: none; */
-    /* clip-path:inset(0% 0% 0% 45%);*/
-    /* clip-path:polygon(0 0, 68% 0, 26% 75%, 80% 90%, 14% 100%);  */
-    /* clip-path:polygon(68% 0%, 60% 20%, 100% 70%, 0% 100%, 0% 0%);  */
-    /* clip-path:polygon(0 0, 69% 0, 34% 61%, 69% 78%, 0 78%, 0 50%); */
-    
-
-
-    
-.dark-gavels-container {
+.gavels-container {
     display: flex;
     justify-content: center;
     height: 50px;
     width: 210px;
     align-items: center;
-    /* transition: color .2s, transform .2s; */
-
-    position: absolute;
-    margin-left: 34px;
-    display: none;
+    position: relative;
 }
 
-
-/* .gavel-4 {
-    margin-left: -10px;
-} */
-/* .gavel-6 {
-    padding-right: -2px;
-    padding-left: -2px;
-    margin-left: -8px;
-    margin-right: -8px;
-}  */
-
-/* .gavel-10 {
-    padding-left: -30px;
-    margin-left: -20px;
-}
-
-    /* align-items: center;
+.gavel {
+    height: 44px;
+    width: 44px;
+    align-items: center;
     padding-bottom: 1px;
     padding-top: 1px;
-    position: absolute;
-    top: -13px;
-    left: -19px; */ 
-    /* display: none; */
-
-
-/* .row-dark {
-    height: 74px;
-    width: 74px;
-    align-items: center;
+    margin-right: -1;
+    margin-left: -1;
     position: relative;
-    
-} */
+    cursor: pointer;
+    transition: color .2s, transform .2s;
+    animation: tryit;
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 68%, 0 50%, 0% 50%) ;
+}
 
-/* .gavel-dark:hover {
-    transform: scale(1.2);
-} */
- /* .gavel-light:hover {
-    transform: scale(2);
- } */
+/* .gavel-wrap:hover .gavel {
+    filter: drop-shadow(2px 2px 2px black); 
+    }
+.gavel-wrap:hover .back-gavel:hover {
+        filter: drop-shadow(2px 2px 2px black); 
+    } */
+    
+.gavel:hover {
+     filter: drop-shadow(2px 2px 2px black); 
+     z-index: 10;
+     transform: rotate(-12deg);
+     transform-origin: bottom right;
+     
+     clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 68%, 0 50%, 0% 50%) ;
+}
+
+
+ 
+.back-gavel {
+    height:44px;
+    width: 44px;
+    margin-left: -44px;
+    /* clip-path:polygon(0 0, 100% 0, 100% 75%, 50% 68%, 0 50%, 0% 50%); */
+    clip-path:polygon(0 50%, 60% 70%, 80% 100%, 0 100%);
+
    
+}
+
+.back-gavel:hover {
+    filter: drop-shadow(2px 2px 2px black); 
+    /* transform: rotate(-12deg);
+    transform-origin: bottom right; */
+}
+    /* clip-path:polygon(0 0, 100% 0, 100% 75%, 50% 68%, 0 50%, 0% 50%) */
+    /* clip-path:polygon(0 50%, 60% 70%, 80% 100%, 0 100%); */
+    /* 
+     */
+
+/* .gavels-container .gavel:hover {
+    filter: drop-shadow(2px 2px 2px black);
+    clip-path:polygon(0 0, 100% 0, 100% 75%, 50% 68%, 0 50%, 0% 50%);  
+    transform: rotate(-12deg);
+    transform-origin: bottom right; 
+}  */
+
+
 
