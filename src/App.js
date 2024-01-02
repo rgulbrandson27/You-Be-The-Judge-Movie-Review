@@ -5,6 +5,7 @@ import MoviesContainer from './components/MoviesContainer';
 import './components/MoviesContainer.css';
 import DescriptionCom from './components/DescriptionCom';
 import ReviewForm from './components/Reviews/ReviewForm';
+import Gavels from './components/Reviews/Gavels'
 
 
 
@@ -12,13 +13,14 @@ function App() {
   return (
     <div>
       < Header />
-      {/* < Gavels /> */}
+ 
 
 
-  
+      {/* <Gavels /> */}
       {/* <DescriptionCom/> */}
-      {/* <ReviewForm/> */}
+    
       < MoviesContainer />
+      {/* <ReviewForm/> */}
     </div>
   )
 }

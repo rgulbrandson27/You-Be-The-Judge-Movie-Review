@@ -41,15 +41,14 @@ import ReviewForm from './Reviews/ReviewForm.js';
                 </div>   
                 <div className="text-area">
                     <h2 className="title">{title}</h2>
-                        <img className="reel" src={NewViewWhite}
-                            onClick = {e => setHandleClick(true)}/>
-                    <p className="link">    
-                        <a href={link} target="_blank">go to IMBd</a>
-                    </p>
-
                     <p className="year">{year}</p>
                     <p className="rating">{rating}</p>
-                    <p className="minutes">{runtime}</p>                    
+                    <p className="minutes">{runtime}</p>   
+                    <img className="reel" src={NewViewWhite}
+                        onClick = {e => setHandleClick(true)}/>
+                    <p className="link">    
+                        <a href={link} target="_blank">go to IMBd</a>
+                    </p>                 
                     <div className="review-box"></div>
                         <img className="scale" src={Scale}/>
                         <p className="count" >{count} Reviews</p>
