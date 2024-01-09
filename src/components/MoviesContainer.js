@@ -3,6 +3,7 @@ import MovieComponent from './MovieComponent';
 import './MovieComponent.css';
 import './MoviesContainer.css';
 import movies from './MovieList';
+import ReviewList from './Reviews/ReviewList';
 
 const MoviesContainer = () => {
     return (
@@ -20,6 +21,7 @@ const MoviesContainer = () => {
                         description={movie.description}
                         poster={movie.poster}
                         link={movie.link}
+                        count={ReviewList.length}
                         />
                         )
                     ))

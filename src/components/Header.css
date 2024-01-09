@@ -14,11 +14,13 @@
   display: grid;
   background-color: white;
   border-radius: .5rem;
-  opacity: 0.7;
+  opacity: 0.75;
   width: 90%; 
   align-self: center;
   justify-self: center;
   padding: .5rem;
+  /* margin-left: -5rem;
+  margin-right: -5rem; */
 }
     /* display: grid;
     grid-row-gap: 20px;

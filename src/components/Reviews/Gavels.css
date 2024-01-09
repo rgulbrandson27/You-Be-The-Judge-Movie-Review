@@ -12,6 +12,7 @@
     width: 100%;
     margin-top: 8px;
     margin-bottom: 8px;
+    color: white;
 }
 
 .gavels-box {
@@ -33,6 +34,8 @@
     height: 60px;
     width: 200px;
     margin-top: 2px;
+    margin-right: 15px;
+    margin-left: 15px;
 }
 
 input[type="radio"] {
@@ -45,12 +48,14 @@ input[type="radio"] {
 }
 
 .dissent {
-    font-size: 1rem;
+    font-size: .8rem;
     margin-top: 14px;
+    color: white;
 }
 
 .concur {
-    font-size: 1rem;
+    font-size: .8rem;
     margin-top: 14px;
+    color: white;
 }
 

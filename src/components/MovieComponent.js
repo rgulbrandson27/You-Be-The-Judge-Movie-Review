@@ -7,14 +7,16 @@ import DescriptionCom from './DescriptionCom.js';
 import reactDOM from 'react';
 import ReactDOM from 'react-dom/client';
 import ReviewForm from './Reviews/ReviewForm.js';
+import ReviewList from './Reviews/ReviewList';
 
 
-    const MovieComponent = ({ title, poster, description, year, rating, runtime, link, count, average}) => {
+    const MovieComponent = ({ title, poster, description, year, rating, runtime, link, count, average, reviews}) => {
 
     const[handleClick, setHandleClick] = useState(false);
     const[handleHover, setHandleHover] = useState(false);
     const[handleReviewClick, setHandleReviewClick] = useState (false);
     const posterStyle = {border: "4px solid rgb(10,147,150)", radius:"8px", width: "214px", height: "300px", margin:"-10px", marginRight:"-12px", z:"20"};
+ 
     
     // function handleReviewClick(e) {
     //     if (handleReviewClick === true) {
@@ -28,7 +30,6 @@ import ReviewForm from './Reviews/ReviewForm.js';
 
     return (
         <>
-
             {handleClick ?  <DescriptionCom className="description" setHandleClick={setHandleClick} title={title} description={description}></DescriptionCom>  
             : <div className="movie">
                 <div className="poster-area"     
@@ -51,19 +52,20 @@ import ReviewForm from './Reviews/ReviewForm.js';
                     </p>                 
                     <div className="review-box"></div>
                         <img className="scale" src={Scale}/>
-                        <p className="count" >{count} Reviews</p>
+                        {{count} === 1 ? <p className="count" >{count} Review</p> : <p className="count" >{count} Reviews</p>}
                         <p className="review"  
                             onClick = {e => setHandleReviewClick(true)}>Leave a Review</p>
-                        {handleReviewClick && <ReviewForm className="review-form" title={title}>   </ReviewForm>}
+                       
                         <p className="score">{average} / 5.0</p>
                     <div/>
                 </div>
             </div>
     }
+         {handleReviewClick && <ReviewForm className="review-pop-up" title={title}>   </ReviewForm>}
         </>
         );
     }
-    
+     
 export default MovieComponent;
 
 
