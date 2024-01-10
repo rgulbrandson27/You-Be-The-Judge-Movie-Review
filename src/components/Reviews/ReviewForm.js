@@ -14,7 +14,7 @@ const ReviewForm = ({title}) => {
     const [reviewList, setReviewList] = useState([
         {reviewerName:"Sunshine", reviewerRating:"5.0", reviewerComments:"Loved this Movie! It has got to be one of my top ten favorites of all time!", reviewId:"1"}, 
         {reviewerName:"Karen", reviewerRating:"1.0", reviewerComments:"This movie has been incorrectly rated.  A PG-13 rating would have been much more appropriate for this supposedly G rated film. The Motion Picture Association of America will be hearing from me first thing in the morning!", reviewId:"2"}, 
-        {reviewerName:"Soccer Mom", reviewerRating:"2.0", reviewerComments:"This movie was a waste of time, I would have rather watched Goonies with the kids for the 28th time.", reviewId:"2"}]); 
+        {reviewerName:"Soccer Mom", reviewerRating:"2.0", reviewerComments:"This movie was a waste of time, I would have rather watched Goonies with the kids for the 28th time.", reviewId:"3"}]); 
     const [ratingDisplay, setRatingDisplay] = useState("");
     
     const resetFields = () => {
@@ -29,7 +29,7 @@ const ReviewForm = ({title}) => {
         const newReview = { reviewerName, reviewerRating, reviewerComments, reviewId: reviewList.length + 1 };
         //use this method of setting an id only if you are okay with an id changing (would not want to do for a movie id for example)
         console.log(newReview);
-        setReviewList([...reviewList, newReview]);
+        setReviewList([newReview, ...reviewList]);
         console.log(reviewList);
         resetFields();
     }
@@ -53,7 +53,7 @@ const ReviewForm = ({title}) => {
                                 name="rating" 
                                 required
                                 value={ratingValue}
-                                onClick={() => setReviewerRating(ratingValue)}/>
+                                onClick={() => setReviewerRating(ratingValue + ".0")}/>
                             
                                 <PiGavelFill 
                                 className="gavel" 
