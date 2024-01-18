@@ -1,42 +1,53 @@
 import React, {useState} from 'react';
 import './MovieComponent.css'
 import movies from './MovieList.js';
+import {PiArrowArcLeft, PiGavelFill} from 'react-icons/pi';
 import Scale from './Images/Scale.png';
 import NewViewWhite from './Images/NewViewWhite.png';
 import DescriptionCom from './DescriptionCom.js';
-import reactDOM from 'react';
-import ReactDOM from 'react-dom/client';
+// import reactDOM from 'react';
+// import ReactDOM from 'react-dom/client';
 import ReviewForm from './Reviews/ReviewForm.js';
 import ReviewList from './Reviews/ReviewList';
+import Arrow from './Images/Arrow.png';
 
 
-    const MovieComponent = ({ title, poster, description, year, rating, runtime, link, count, average, reviews}) => {
+const MovieComponent = ({ title, poster, description, year, rating, runtime, link, reviews: individualReviews}) => {
 
-    const[handleClick, setHandleClick] = useState(false);
-    const[handleHover, setHandleHover] = useState(false);
-    const[handleReviewClick, setHandleReviewClick] = useState (false);
+    const [handleDescriptionClick, setHandleDescriptionClick] = useState(false);
+    const [handlePosterHover, setHandlePosterHover] = useState(false);
+    const [showLeaveReviewForm, setShowLeaveReviewForm] = useState (false);
+    const [showReviewList, setShowReviewList] = useState (false);
+    const [reviews, setReviews] = useState ( [
+            // {reviewerName:"Sunshine", reviewerRating: 5.0, reviewerComments:"Loved this Movie! It has got to be one of my top ten favorites of all time!", reviewId:"1"}, 
+            // {reviewerName:"Karen", reviewerRating: 1.0, reviewerComments:"This movie has been incorrectly rated.  A PG-13 rating would have been much more appropriate for this supposedly G rated film. The Motion Picture Association of America will be hearing from me first thing in the morning!", reviewId:"2"}, 
+            // {reviewerName:"Soccer Mom", reviewerRating: 2.0, reviewerComments:"This movie was a waste of time, I would have rather watched Goonies with the kids for the 28th time.", reviewId:"3"}
+            ] );
+
+    const count = reviews.length;
+    console.log(count);
+
+    const ratingsArray = reviews.map(rating => rating.reviewerRating);
+    console.log(ratingsArray);
+
+    const sum = ratingsArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+        console.log(sum);
+
+    const average = (sum / (reviews.length)).toFixed(1);
+    console.log(average);
+
+
     const posterStyle = {border: "4px solid rgb(10,147,150)", radius:"8px", width: "214px", height: "300px", margin:"-10px", marginRight:"-12px", z:"20"};
- 
-    
-    // function handleReviewClick(e) {
-    //     if (handleReviewClick === true) {
-    //         <ReviewForm className="review-form" setHandleReviewClick={setHandleReviewClick} title={title}></ReviewForm>
-    //     }
-
-    // function handleReviewClick() {
-    //  <ReviewForm className="reviewFormShow" title={title} ></ReviewForm>
-    // }
-
 
     return (
         <>
-            {handleClick ?  <DescriptionCom className="description" setHandleClick={setHandleClick} title={title} description={description}></DescriptionCom>  
+            {handleDescriptionClick ?  <DescriptionCom className="description" setHandleDescriptionClick={setHandleDescriptionClick} title={title} description={description}></DescriptionCom>  
             : <div className="movie">
                 <div className="poster-area"     
-                    onMouseEnter = {e => setHandleHover(true)}
-                    onMouseLeave = {e => setHandleHover(false)}>      
+                    onMouseEnter = {e => setHandlePosterHover(true)}
+                    onMouseLeave = {e => setHandlePosterHover(false)}>      
 
-                    {handleHover ? <img className="poster" style={posterStyle} src={poster}/> : <img className="poster" src={poster}/> 
+                    {handlePosterHover ? <img className="poster" style={posterStyle} src={poster}/> : <img className="poster" src={poster}/> 
     
                     }
                 </div>   
@@ -46,27 +57,41 @@ import ReviewList from './Reviews/ReviewList';
                     <p className="rating">{rating}</p>
                     <p className="minutes">{runtime}</p>   
                     <img className="reel" src={NewViewWhite}
-                        onClick = {e => setHandleClick(true)}/>
+                        onClick = {e => setHandleDescriptionClick(true)}/>
                     <p className="link">    
                         <a href={link} target="_blank">go to IMBd</a>
                     </p>                 
                     <div className="review-box"></div>
                         <img className="scale" src={Scale}/>
-                        {{count} === 1 ? <p className="count" >{count} Review</p> : <p className="count" >{count} Reviews</p>}
+
+                        {(count > 1) ? <p className="count read-reviews" onClick = {e => setShowReviewList(true)}>{count} Reviews</p> 
+                        : 
+                            ((count > 0) ? <p className="count read-reviews" onClick = {e => setShowReviewList(true)}>{count} Review</p> 
+                            : <p className="count no-reviews" >No Reviews</p>)
+                        }
+                        <p className="be-the-first">You are hereby ordered to leave your opinion!<PiGavelFill className="mini-gavel"/> <img className="arrow" src={Arrow}/></p>
+                        <p className="view">View</p>
+                        
+                        
                         <p className="review"  
-                            onClick = {e => setHandleReviewClick(true)}>Leave a Review</p>
+                            onClick = {e => setShowLeaveReviewForm(true)}>Leave a Review</p>
                        
-                        <p className="score">{average} / 5.0</p>
+                        <p className="score">{average} / 5.0</p>  
                     <div/>
+                </div> 
+    
+                {showLeaveReviewForm && (
+                <ReviewForm className="review-pop-up"  title={title} reviews={reviews} setReviews={setReviews} count={count} />
+                )}
+                {showReviewList ? (
+                    <div>
+                        <p>Show: {showReviewList.toString()}</p>
+                <ReviewList className="review-list-pop-up" title={title} reviews={reviews} />
                 </div>
-            </div>
-    }
-         {handleReviewClick && <ReviewForm className="review-pop-up" title={title}>   </ReviewForm>}
+                ) : null}
+                </div>
+            }
         </>
-        );
-    }
-     
+    );
+}; 
 export default MovieComponent;
-
-
-

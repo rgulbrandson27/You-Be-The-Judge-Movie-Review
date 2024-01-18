@@ -1,0 +1,28 @@
+
+
+FUNCTION
+
+Make form field requirement note not pop up when using reset button.
+
+Could add something to mark as reviews having been read by user, but then notification if one has been added (but individuals would each need their own account?)
+
+Would be super cool to be able to visually turn the card around and be able to watch the trailer on the back.  
+
+Once upon opening, have a movie reel roll across header (lightly in the background) and leave a strip of movie reel in its path.  
+Even then maybe the reel does a circle or two and then it stops and a gavel appears or maybe the whole thing fades away???
+
+
+STYLING
+
+On main movie component, set apart the average rating and the 5.0 so one is bolder or size is differnt (like on WDS budgeting app tutorial)
+
+Make mini-gavel slowly bang down beginning when someone clicks on "No Reviews"
+
+Row with Year, Rating and Minutes - Have margin adjustments to make look better.
+
+Make Title Smaller if it is going to go onto two lines (or bigger for one line:))
+
+Change the "view Description/reel" image.
+
+Change description exit button to an x image.
+

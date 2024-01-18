@@ -4,7 +4,7 @@ import {UseState} from 'react';
 import './DescriptionCom.css'
 import movies from './MovieList';
 
-const DescriptionCom = ({title, description, setHandleClick}) => {
+const DescriptionCom = ({title, description, setHandleDescriptionClick}) => {
 
     // const [reviewInfo, setReviewInfo] = useState({info: "Review"})
   
@@ -15,7 +15,7 @@ const DescriptionCom = ({title, description, setHandleClick}) => {
           <h1 className="title-text">{title}</h1>
           <p className="description-text">{description}</p>
           <img className="sign" src={ExitSign}
-           onClick = {()=> setHandleClick(false)}/>
+           onClick = {()=> setHandleDescriptionClick(false)}/>
       </div>
       </>
     )

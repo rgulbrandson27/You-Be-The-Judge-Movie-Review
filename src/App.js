@@ -10,11 +10,13 @@ import ReviewList from './components/Reviews/ReviewList';
 
 
 
+
 function App() {
   return (
     <div>
       < Header />
 
+      {/* <ReviewList /> */}
  
 
       < MoviesContainer />
