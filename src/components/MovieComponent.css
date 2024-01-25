@@ -7,6 +7,7 @@
     border-radius: 8px;
     grid-template-columns: 44% 56%;
     grid-template-rows: 310px;
+    position: static;
 }
 
 .poster-area {

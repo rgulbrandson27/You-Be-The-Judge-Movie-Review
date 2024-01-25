@@ -1,32 +1,15 @@
 import React, {useEffect, useState} from 'react';
 import MovieComponent from './MovieComponent';
-import './MovieComponent.css';
 import './MoviesContainer.css';
-import movies from './MovieList';
-import ReviewList from './Reviews/ReviewList';
+import ReviewForm from './Reviews/ReviewForm.js';
 
-
-// const url = "https://65a559c852f07a8b4a3eec40.mockapi.io/movies/reviews"
-
-
-
-const MoviesContainer = () => {
+const MoviesContainer = ({title}) => {
     const [movies, setMovies] = useState([]);
 
     useEffect(() => {
-    //     const fetchData = async () => {
-    //         try {
-    //             const response = await fetch("https://65a559c852f07a8b4a3eec40.mockapi.io/movies/reviews");
-    //             const data = await response.json();
-    //             setMovies(data);
-    //         } catch (error) {
-    //             console.error('Error fetching data:', error);
-    //         }
-    //         };
-    //     fetchData();
-    // }, []);
 
-        fetch('https://65a559c852f07a8b4a3eec40.mockapi.io/movies/reviews')
+        // fetch('https://65a559c852f07a8b4a3eec40.mockapi.io/moviejudge/movies')
+        fetch('http://localhost:3000/movies')
             .then(res => {
                 return res.json();
             })
@@ -41,7 +24,8 @@ const MoviesContainer = () => {
             <div className="movies-container">
                 {movies.map((movie) => (
                         <MovieComponent
-                        key={movie.id}
+                        key={movie.movieId}
+                        movieId={movie.movieId}
                         imbd={movie.imbd}
                         title={movie.title}
                         year={movie.year}
@@ -56,6 +40,9 @@ const MoviesContainer = () => {
                     )
                 }
             </div>
+            {/* <div className="display-holder">
+                <ReviewForm className="duplicate" title={title} />
+            </div> */}
         </div>  
     </div>
 );

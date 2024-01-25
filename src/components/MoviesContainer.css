@@ -4,6 +4,7 @@
     height: 100%;
     padding: 0;
     background-color: #ea9f3d;
+    position: relative;
      /* rgb(192, 181, 166); */
 
 }
@@ -19,3 +20,19 @@
     justify-content: center;
     padding-inline: 1rem;
 }
+
+.display-holder {
+    height: 80%;
+    display:flex;
+    width: 480px;
+    margin-top: -80px;
+    background-color:#ea9f3d;
+    z-index: 1500;
+    position: fixed;
+    justify-self: center;
+}
+
+/* .duplicate {
+    position: absolute;
+    width: 400px;
+} */

@@ -1,68 +1,56 @@
 import React, {useState} from 'react';
-import ReviewList from './ReviewList';
 import './ReviewForm.css';
 import {PiGavelFill} from 'react-icons/pi';
 import './Gavels.css';
 import './ReviewList.css';
-import MovieList from '../MovieList.js';
-import MovieComponent from '../MovieComponent';
-import movies from '../MovieList.js';
 
-const ReviewForm = ({key, title, reviews, setReviews}) => {  
+const ReviewForm = ({movieId, title, reviews, setReviews, setShowLeaveReviewForm, setShowReviewList}) => {  
 
     const [reviewerName, setReviewerName] = useState("");
     const [reviewerRating, setReviewerRating] = useState("");
     const [reviewerComments, setReviewerComments] = useState("");
     const [ratingDisplay, setRatingDisplay] = useState([]);
       
-    // const createNewReview = async (e) => {
-    //     e.preventDefault();
 
-    //     const newReview = { reviewerName, reviewerRating, reviewerComments }
+    const createNewReview = async (e) => {
+        e.preventDefault();
+        console.log(movieId);
+        const nextReviewId = movieId * 100 + reviews.length +1;
+        const newReview = { movieId, reviewId: nextReviewId, reviewerName, reviewerRating, reviewerComments };
+        console.log('Request payload:', JSON.stringify(newReview));
+        try {
+            const response = await fetch(`http://localhost:3000/movies/${movieId}`, {
+                                        
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(newReview),
 
-    //    const response= await fetch(`https://65a559c852f07a8b4a3eec40.mockapi.io/movies/reviews/${key}/reviews`, {
-    //         method: 'POST',
-    //         headers: {"Content-Type": "application/json" },
-    //         body: JSON.stringify(newReview)
-    //         }).then(() => {
-    //     console.log("A new review has been added.")
-    // })
-    // setReviews([newReview, ...reviews])
-    //     }
+            });
+
+            console.log('Response from API:', response);
+
+        if (!response.ok) {
+            throw new Error(`Failed to create review: ${response.status}`);
+        }
         
-            // , reviewId: reviewList.length + 1 };
-        //use this method of setting an id only if you are okay with an id changing (would not want to do for a movie id for example)
-        // console.log(newReview);
-        // console.log(reviewList);
-        // resetFields();
-    
-        const createNewReview = (e) => {
-            e.preventDefault();
-            const newReview = { reviewerName, reviewerRating, reviewerComments };
-    
-           fetch(`https://65a559c852f07a8b4a3eec40.mockapi.io/movies/reviews/${key}`, {
-                method: 'POST',
-                headers: {
-                    "Content-Type": "application/json", 
-                },
-                body: JSON.stringify(newReview),
-                })
-                .then(response => response.json())
-                .then(() => {
-                console.log("A new review has been added.")
-                })
-                .catch(error => console.error('Error', error));
-            
-            setReviews([newReview, ...reviews])
-            }
-
-
+        const newReviewData = await response.json();
+        console.log("New:", newReviewData)
+        setReviews([...reviews, newReviewData.reviews]);
+        console.log("A New Review has been Added.");
+        }   catch (error) {
+        console.error('Error in fetch:', error);
+        }
+        setShowLeaveReviewForm(false);
+        setShowReviewList(true);
+    };
 
     return (
         <div className="review-container">
             <h1 className="review-title">{title}</h1>
             <h1 className="your-opinion">What's YOUR Opinion?</h1>
-            <form className="review-form" onSubmit={ () => createNewReview()}>   
+            <form className="review-form" onSubmit={createNewReview}>   
                 <div>
                     <p className="ratingDisplay">{ratingDisplay}</p>
                     <div className="gavels-box">
@@ -75,7 +63,6 @@ const ReviewForm = ({key, title, reviews, setReviews}) => {
                                 <input 
                                 type="radio" 
                                 name="rating" 
-                                required
                                 value={ratingValue} 
                                 onClick={() => setReviewerRating(ratingValue)}/>
                             
@@ -115,11 +102,9 @@ const ReviewForm = ({key, title, reviews, setReviews}) => {
             </form>
 
             {/* {handleSubmitReview && <ReviewList className="show-reviews" title ={title} >   </ReviewList>} */}
-
-      
-          
+            
         </div> //end review container
-    )
-}
+    );
+};
 
 export default ReviewForm;

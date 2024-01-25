@@ -2,17 +2,14 @@
     display: flex;
     flex-direction: column;
     justify-self: center;
-
-    position: relative;
     background-color: #0A9396;
-    width:240%;
-    height: 100%;
-    /* margin-right: auto;
-    margin-left: auto; */
-    margin-top: -30rem;
+    width:420px;
+    min-height: 480px;
+    max-height: 75%;
+    margin-top: -40px;
     border: solid black 1px;
     padding-top: 10px;
-    border-radius:5px;
+    border-radius: 5px;
     scroll-behavior:smooth;
     overflow-y:auto;
     z-index: 100;
@@ -20,9 +17,11 @@
     align-items: center;
     border-radius: .5rem;
     outline: solid 10px  #6d676f;
-
-}
-
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    }
 .review-item {
     display: flex;
     flex-direction: column;

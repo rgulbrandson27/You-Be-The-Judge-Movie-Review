@@ -1,21 +1,24 @@
 .review-container {
     display: flex;
+    position:fixed;
     justify-self: center;
     flex-direction: column;
-    /* min-height: auto; */
-    height: 100%;
+    min-height: 480px;
+    justify-self: center;
     width: 420px;
     outline: solid 10px  #0A9396;
     padding-top: 10px;
+    margin-top: -40px;
     align-content: center;
     align-items: center;
     border-radius: .5rem;
     background-color: #6d676f;
     z-index: 100;
-    position: fixed;
-    margin-top: -5rem;
-    overflow-y: auto;
-
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* margin-top: -5rem; */
+    /* overflow-y: auto; */
 }
 
 .review-title {
@@ -25,11 +28,12 @@
     width: 80%;
     justify-content: center;
     text-justify: center;
+    text-align: center;
     align-content: center;
     align-self: center;
     margin-top: 10px;
     padding: 6px;
-    font-size: minmax(1.8rem, 2rem);
+    font-size: minmax(1.6rem, 2rem);
     color: white;
     font-weight:400;
 }
@@ -69,16 +73,16 @@
 
 .comments{
     border: solid black 2px;
-    width:98%;
+    width:100%;
     margin-bottom: 16px;
 }
 
 .publish-button {
     width: 56%;
-  
     height: 40px;
     align-self: center;
     margin-left: 22%;
+    margin-bottom: 20px;
 }
 
 .publish-button:hover {
@@ -89,26 +93,6 @@
     color: white;
     margin-left: 22%;
 }
-
-.reset-button {
-    width: 34%;
-  
-    margin-left: 33%;
-    margin-top: 10px;
-    margin-bottom: 15px;
-}
-
-.reset-button:hover {
-    background-color:  #0A9396;
-    width: 34%;
- 
-  
-    margin-top: 10px;
-    margin-bottom: 15px;
-    color: white;
-    margin-left: 33%;
-}
-
 
 
 .reviewer-list {

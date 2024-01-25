@@ -1,3 +1,6 @@
+// open integrated terminal from db.json
+// type: json-server --watch db.json (watch may be not need anymore)
+// open browser and type in http://localhost:3000/movies
 
 
 FUNCTION
