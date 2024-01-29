@@ -4,14 +4,13 @@ import {PiGavelFill} from 'react-icons/pi';
 import './Gavels.css';
 import './ReviewList.css';
 
-const ReviewForm = ({movieId, title, reviews, setReviews, setShowLeaveReviewForm, setShowReviewList}) => {  
+const ReviewForm = ({movieId, title, reviews, setShowLeaveReviewForm, setShowReviewList, onReviewCreated}) => {  
 
     const [reviewerName, setReviewerName] = useState("");
     const [reviewerRating, setReviewerRating] = useState("");
     const [reviewerComments, setReviewerComments] = useState("");
     const [ratingDisplay, setRatingDisplay] = useState([]);
       
-
     const createNewReview = async (e) => {
         e.preventDefault();
         console.log(movieId);
@@ -19,7 +18,7 @@ const ReviewForm = ({movieId, title, reviews, setReviews, setShowLeaveReviewForm
         const newReview = { movieId, reviewId: nextReviewId, reviewerName, reviewerRating, reviewerComments };
         console.log('Request payload:', JSON.stringify(newReview));
         try {
-            const response = await fetch(`http://localhost:3000/movies/${movieId}`, {
+            const response = await fetch(`http://localhost:3000/movies/${movieId}/reviews`, {
                                         
             method: 'POST',
             headers: {
@@ -37,7 +36,7 @@ const ReviewForm = ({movieId, title, reviews, setReviews, setShowLeaveReviewForm
         
         const newReviewData = await response.json();
         console.log("New:", newReviewData)
-        setReviews([...reviews, newReviewData.reviews]);
+        onReviewCreated([...reviews, newReviewData].reverse, movieId);
         console.log("A New Review has been Added.");
         }   catch (error) {
         console.error('Error in fetch:', error);
@@ -97,11 +96,8 @@ const ReviewForm = ({movieId, title, reviews, setReviews, setShowLeaveReviewForm
                     onChange={(e) => setReviewerComments(e.target.value)}>
                     </textarea>
                 <button className="publish-button" type="submit" >Publish</button> 
-                {/* <button className="reset-button" type="submit" onClick={()=>resetFields()}> Reset</button> */}
                 </div>
             </form>
-
-            {/* {handleSubmitReview && <ReviewList className="show-reviews" title ={title} >   </ReviewList>} */}
             
         </div> //end review container
     );

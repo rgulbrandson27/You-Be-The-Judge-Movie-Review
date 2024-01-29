@@ -1,23 +1,28 @@
 
 #header {
-    height: 120px;
+    height: 90px;
     width: 100%;
     background-color: #534c4b;
     color:  #0A9396;
-
     align-content: center;
-    display: grid;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    display: flex;
+    padding-bottom: 18px;
 }
 
 .header-box {
+  margin-top:20px;
+  margin-bottom:20px;
   height: 100%;
-  display: grid;
+  display: flex;
   background-color: white;
   /* border-radius: .5rem; */
   opacity: 0.75;
   width: 100vw; 
-  align-self: center;
-  justify-self: center;
+ 
+  justify-content: center;
   padding: .5rem;
   /* margin-left: -5rem;
   margin-right: -5rem; */
@@ -26,13 +31,14 @@
     grid-row-gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   place-items: center; */
-
+  
 
 #page-title {
-  display: grid;
+  display: flex;
   align-self: center;
   justify-self: center;
-  font-size: 3rem;
-
+  font-size: 3.3rem;
+  text-shadow: 2px 1px 2px  #534c4b;
 }
+
 

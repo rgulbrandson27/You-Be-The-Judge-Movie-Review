@@ -5,6 +5,9 @@ import ReviewForm from './Reviews/ReviewForm.js';
 
 const MoviesContainer = ({title}) => {
     const [movies, setMovies] = useState([]);
+    const [reviewFormShowing, setReviewFormShowing] = useState(false);        //refers to ANY showing as opposed to just the on tied to ind. component
+    const [reviewListShowing, setReviewListShowing] = useState(false);
+
 
     useEffect(() => {
 
@@ -18,14 +21,24 @@ const MoviesContainer = ({title}) => {
             });
         }, []);
 
+
+        const handleReviewCreated = (updatedReviews, movieId) => {
+            const updatedMovies = movies.map((movie) =>
+              movie.id === movieId ? { ...movie, reviews: updatedReviews } : movie
+            );
+            setMovies(updatedMovies);
+          };
+        
+
+
     return (
     <div>
         <div className="main">
             <div className="movies-container">
                 {movies.map((movie) => (
                         <MovieComponent
-                        key={movie.movieId}
-                        movieId={movie.movieId}
+                        key={movie.id}
+                        movieId={movie.id}
                         imbd={movie.imbd}
                         title={movie.title}
                         year={movie.year}
@@ -35,6 +48,7 @@ const MoviesContainer = ({title}) => {
                         poster={movie.poster}
                         link={movie.link}
                         reviews={movie.reviews}
+                        onReviewCreated={(updatedReviews) => handleReviewCreated(updatedReviews, movie.id)}
                         />
                         )
                     )

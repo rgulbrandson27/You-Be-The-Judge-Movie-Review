@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import './MovieComponent.css'
-import {PiArrowArcLeft, PiGavelFill} from 'react-icons/pi';
+import {PiArrowArcLeft, PiCursor, PiGavelFill} from 'react-icons/pi';
 import Scale from './Images/Scale.png';
 import NewViewWhite from './Images/NewViewWhite.png';
 import DescriptionCom from './DescriptionCom.js';
@@ -11,7 +11,7 @@ import ReviewList from './Reviews/ReviewList';
 import Arrow from './Images/Arrow.png';
 
 
-const MovieComponent = ({ movieId, title, poster, description, year, rating, runtime, link, reviews: individualReviews, reviewerRating, reviewId, reviewerName, reviewerComments }) => {
+const MovieComponent = ({ movieId, title, poster, description, year, rating, runtime, link, reviews, onReviewCreated }) => {
 
     const [handleDescriptionClick, setHandleDescriptionClick] = useState(false);
     const [handlePosterHover, setHandlePosterHover] = useState(false);
@@ -19,23 +19,39 @@ const MovieComponent = ({ movieId, title, poster, description, year, rating, run
     const [average, setAverage] = useState(0);
     const [showLeaveReviewForm, setShowLeaveReviewForm] = useState (false);
     const [showReviewList, setShowReviewList] = useState (false);
-    const [reviews, setReviews] = useState ( [ 
-            // {reviewerName:"Sunshine", reviewerRating: 5.0, reviewerComments:"Loved this Movie! It has got to be one of my top ten favorites of all time!", reviewId:"1"}, 
-            // {reviewerName:"Karen", reviewerRating: 1.0, reviewerComments:"This movie has been incorrectly rated.  A PG-13 rating would have been much more appropriate for this supposedly G rated film. The Motion Picture Association of America will be hearing from me first thing in the morning!", reviewId:"2"}, 
-            // {reviewerName:"Soccer Mom", reviewerRating: 2.0, reviewerComments:"This movie was a waste of time, I would have rather watched Goonies with the kids for the 28th time.", reviewId:"3"}
-        ] );
-    console.log(movieId);
+
+ 
+
     useEffect(() => {
+        console.log("Reviews:", reviews);
+        if(reviews && Array.isArray(reviews) && reviews.length > 0) {
         const totalCount = reviews.length;
-        const totalRating = reviews.reduce((sum, review) => sum + review.rating, 0);
+        console.log("Total Count", totalCount);
+        // const totalRating = reviews.reduce((sum, review) => sum + review.rating, 0);
+        // console.log("Total Rating", totalRating);
+        const totalRating = reviews.reduce((sum, review) => {
+        const reviewRating = review.reviewerRating || review.rating || 0;
+            console.log("Review Rating:", reviewRating);
+            return sum + reviewRating;
+        }, 0);
+        console.log("total Rating:", totalRating);
+
         const avgRating = totalCount > 0 ? totalRating / totalCount : 0;
+        console.log(avgRating);
 
         setCount(totalCount);
+        setAverage(totalCount  >= 1 ? avgRating.toFixed(1) : " __ ")
+        console.log(totalCount);
             // setCount(0);
             // setCount(1);
             //setCount(2);
-        setAverage(count > 1 ? avgRating : " __ ");
-        }, [reviews]);
+        // setAverage(
+        //     totalCount >= 1 ? avgRating : " __ ");
+        }   else {
+            setCount(0);
+            setAverage(" __ ")
+        }     
+    }, [reviews]);
     
 
 
@@ -85,22 +101,29 @@ const MovieComponent = ({ movieId, title, poster, description, year, rating, run
                         }
                         <p className="be-the-first">You are hereby ordered to leave your opinion!<PiGavelFill className="mini-gavel"/> <img className="arrow" src={Arrow}/></p>
                         <p className="view">View</p>
-                        
-                        
+
                         <p className="review"  
-                            onClick = {e => setShowLeaveReviewForm(true)}>Leave a Review</p>
+                             onClick = {e => {
+                                if (!showLeaveReviewForm) {
+                                    setShowLeaveReviewForm(true);
+                                } else {
+                                    e.currentTarget.style.cursor = 'not-allowed';
+                                    // console.log("A Review is Already Showing")
+                                }
+                            }}
+                             >Leave a Review</p>
                        
                         <p className="score">{average} / 5.0</p>  
                     <div/>
                 </div> 
     
                 {showLeaveReviewForm && (
-                <ReviewForm className="review-pop-up" movieId={movieId} title={title} reviews={reviews} setReviews={setReviews} count={count} showLeaveReviewForm={showLeaveReviewForm} setShowLeaveReviewForm={setShowLeaveReviewForm} setShowReviewList={setShowReviewList} />
+                <ReviewForm className="review-pop-up" movieId={movieId} title={title} reviews={reviews} count={count} showLeaveReviewForm={showLeaveReviewForm} setShowLeaveReviewForm={setShowLeaveReviewForm} setShowReviewList={setShowReviewList} onReviewCreated={(updatedReviews) => onReviewCreated(updatedReviews)} />
                 )}
                 {showReviewList ? (
                     <div>
                         <p>Show: {showReviewList.toString()}</p>
-                <ReviewList className="review-list-pop-up" movieId={movieId} title={title} reviews={reviews} setReviews={setReviews}   />
+                <ReviewList className="review-list-pop-up" movieId={movieId} title={title} reviews={reviews}   />
                 </div>
                 ) : null}
                 </div>

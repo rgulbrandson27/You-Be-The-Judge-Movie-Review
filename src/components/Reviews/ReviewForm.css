@@ -4,7 +4,7 @@
     justify-self: center;
     flex-direction: column;
     min-height: 480px;
-    justify-self: center;
+    max-height: 90%;
     width: 420px;
     outline: solid 10px  #0A9396;
     padding-top: 10px;
@@ -15,8 +15,13 @@
     background-color: #6d676f;
     z-index: 100;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    top: 80px;
+    transform: translate(-50%);
+
+    /* position: fixed;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%); */
     /* margin-top: -5rem; */
     /* overflow-y: auto; */
 }
@@ -88,12 +93,10 @@
 .publish-button:hover {
     background-color:  #0A9396;
     width: 56%;
-  
     height: 40px;
     color: white;
     margin-left: 22%;
 }
-
 
 .reviewer-list {
     width: 100%;

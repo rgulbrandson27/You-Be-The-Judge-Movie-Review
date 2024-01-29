@@ -5,10 +5,12 @@
     background-color: #0A9396;
     width:420px;
     min-height: 480px;
-    max-height: 75%;
-    margin-top: -40px;
+    max-height: 90%;
     border: solid black 1px;
     padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
     border-radius: 5px;
     scroll-behavior:smooth;
     overflow-y:auto;
@@ -18,10 +20,31 @@
     border-radius: .5rem;
     outline: solid 10px  #6d676f;
     position: fixed;
+    top: 40px;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%);
     }
+
+    .review-list-title {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        align-self: center;
+        color: white;
+        font-size: minmax(1.6rem, 2rem);
+        font-weight: 400;
+        padding: 6px;
+        /* background-color:#6d676f; */
+        border-radius: 10px;
+        margin-top: 10px;
+        justify-content: center;
+        text-justify: center;
+        text-align: center;
+        align-content: center;
+    }
+
+
+
 .review-item {
     display: flex;
     flex-direction: column;
@@ -29,29 +52,33 @@
     position: relative;
     color: white;
     background-color: #0A9396;
-    opacity: 50;
-    display: flex;
-    flex-direction:column;
-    margin-left: 10px;
-    margin-top:10px;
-    padding-left: 10px;
-    padding-right: 14px;
+    /* margin-top:10px; */
+
     margin-bottom: -5px;
-    z-index: 10000;
+    z-index: 10;
     /* box-shadow: 15px 3px 5px 2px rgba(0,0,0,0.1); */
 
     /* background-color: #0A9396; */
 
 }
 
-.review-list-title {
+
+
+/* .review-title {
+    background-color: #0A9396;
+    border-radius: 10px;
     display: flex;
-    flex-direction: column;
+    width: 80%;
+    justify-content: center;
+    text-justify: center;
+    text-align: center;
+    align-content: center;
     align-self: center;
+    margin-top: 10px;
+    padding: 6px;
+    font-size: minmax(1.6rem, 2rem);
     color: white;
-    font-size: 2rem;
-    padding-top: 10px;
-}
+    font-weight:400; */
 
 .name-rating-row {
     margin-bottom: 5px;
@@ -61,13 +88,14 @@
 .r-name {
     font-size: 1.1rem;
     margin-right: 30px;
-    font-weight: 500;
+    font-weight: 400;
     margin-bottom: 0;
 }
 .r-rating {
-    font-size: 1.0rem;
-    font-weight: 500;
+    font-size: 1.1rem;
+    font-weight: 400;
     margin-bottom:0;
+    /* text-shadow: 1px 1px black; */
 }
 
 .r-comments {
@@ -86,10 +114,16 @@
 } */
 
 
+.lighten {
+    font-weight: 200;
+    font-size: 16px;
+}
+
 .line {
     margin-top: -12px;
     margin-bottom: 8px;
     font-weight:300;
     box-shadow: 2px rgba(0,0,0,0.1);
     align-self: center;
+    text-shadow: 1px 1px black;
 }

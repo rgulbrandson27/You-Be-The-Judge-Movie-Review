@@ -7,7 +7,6 @@ const Gavels = ({onRatingSelection}) => {
     const [rating, setRating] = useState("");    
     const [ratingDisplay, setratingDisplay] = useState("");
 
-
     //PREVIOUSLY USED TO GET CHILD PROP TO PARENT THROUGHA A PARENT FUNCTION
     // - ABANDONED AND COMBINED TO ONE COMPONENT
 
@@ -15,7 +14,6 @@ const Gavels = ({onRatingSelection}) => {
     //     // const chosenValue = e.target.value;
     //     onRatingSelection(chosenValue);
     //     setRating(chosenValue);
-   
     // }
 
     return (
@@ -37,7 +35,7 @@ const Gavels = ({onRatingSelection}) => {
                                 type="radio" 
                                 name="rating" 
                                 value={ratingValue}
-                                // onClick={() => handleGavelsClick(ratingValue)}
+                                // onClick={() => ratingValue > 1 ? handleGavelsClick(ratingValue): ""}
                                     // setRating(ratingValue) }
                             />
                             <PiGavelFill 

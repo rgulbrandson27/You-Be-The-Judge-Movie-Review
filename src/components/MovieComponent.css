@@ -309,6 +309,10 @@ a:hover {
  position: fixed;
 }
 
+.disabled {
+    cursor: not-allowed;
+}
+
 /* .movie {
     display: grid;
     height: 300px;
