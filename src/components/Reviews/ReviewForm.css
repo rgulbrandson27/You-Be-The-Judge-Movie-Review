@@ -98,6 +98,20 @@
     margin-left: 22%;
 }
 
+.cancel-button {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    position: fixed;
+    left:50%;
+    margin-bottom: 10px;
+    transform:translateX(-50%);
+}
+
+.cancel-button:hover {
+    color: red;
+}
+
 .reviewer-list {
     width: 100%;
     border: solid black 2px;

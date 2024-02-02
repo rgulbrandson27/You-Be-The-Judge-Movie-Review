@@ -25,6 +25,30 @@
     transform: translate(-50%);
     }
 
+.exit-icon {
+
+    color:  #6d676f;
+    height: 44px;
+    width: 44px;
+    z-index:102;
+    position: fixed;
+    text-align: center;
+    text-justify: center;
+    margin-right: -350px;
+    margin-top: 0px;
+    padding: -8px;
+}
+
+.exit-icon-background {
+    background-color: white;
+    z-index: 101;
+    height: 25px;
+    width: 25px;
+    margin-right: -350px;
+    position: fixed;
+    margin-top: 10px;
+}
+
     .review-list-title {
         display: flex;
         flex-direction: column;

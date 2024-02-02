@@ -18,7 +18,7 @@ const ReviewForm = ({movieId, title, reviews, setShowLeaveReviewForm, setShowRev
         const newReview = { movieId, reviewId: nextReviewId, reviewerName, reviewerRating, reviewerComments };
         console.log('Request payload:', JSON.stringify(newReview));
         try {
-            const response = await fetch(`http://localhost:3000/movies/${movieId}/reviews`, {
+            const response = await fetch(`http://localhost:3000/movies/${movieId}`, {
                                         
             method: 'POST',
             headers: {
@@ -96,6 +96,8 @@ const ReviewForm = ({movieId, title, reviews, setShowLeaveReviewForm, setShowRev
                     onChange={(e) => setReviewerComments(e.target.value)}>
                     </textarea>
                 <button className="publish-button" type="submit" >Publish</button> 
+                <button className="cancel-button" type="submit" >Cancel</button> 
+
                 </div>
             </form>
             

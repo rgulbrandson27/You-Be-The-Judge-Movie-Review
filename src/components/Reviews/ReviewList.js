@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
+import { AiFillCloseSquare } from "react-icons/ai";
 
-const ReviewList = ({movieId, title, reviews}) => {
+const ReviewList = ({movieId, title, reviews, setShowReviewList}) => {
     
 useEffect(() => {
     const fetchReviewData = async () => {
@@ -29,8 +30,10 @@ useEffect(() => {
 
 return(
     <div>
-        <h2>{title}</h2>
+        {/* <h2>{title}</h2> */}
         <div className="review-list">
+            <AiFillCloseSquare className="exit-icon" onClick = {e => setShowReviewList(false)} />
+        <div className="exit-icon-background"></div>
         <h2 className="review-list-title">{title}</h2>
                 {reviews.map((review) => (
                     <div className="review-item" key={review.id} reviewid={review.id}>

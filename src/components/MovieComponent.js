@@ -11,7 +11,7 @@ import ReviewList from './Reviews/ReviewList';
 import Arrow from './Images/Arrow.png';
 
 
-const MovieComponent = ({ movieId, title, poster, description, year, rating, runtime, link, reviews, onReviewCreated }) => {
+const MovieComponent = ({ movieId, title, poster, description, year, rating, runtime, link, reviews, onReviewCreated, handleReviewCreated }) => {
 
     const [handleDescriptionClick, setHandleDescriptionClick] = useState(false);
     const [handlePosterHover, setHandlePosterHover] = useState(false);
@@ -118,12 +118,12 @@ const MovieComponent = ({ movieId, title, poster, description, year, rating, run
                 </div> 
     
                 {showLeaveReviewForm && (
-                <ReviewForm className="review-pop-up" movieId={movieId} title={title} reviews={reviews} count={count} showLeaveReviewForm={showLeaveReviewForm} setShowLeaveReviewForm={setShowLeaveReviewForm} setShowReviewList={setShowReviewList} onReviewCreated={(updatedReviews) => onReviewCreated(updatedReviews)} />
+                <ReviewForm className="review-pop-up" movieId={movieId} title={title} reviews={reviews} count={count} showLeaveReviewForm={showLeaveReviewForm} setShowLeaveReviewForm={setShowLeaveReviewForm} setShowReviewList={setShowReviewList} onReviewCreated={(updatedReviews) => handleReviewCreated(updatedReviews)} />
                 )}
                 {showReviewList ? (
                     <div>
                         <p>Show: {showReviewList.toString()}</p>
-                <ReviewList className="review-list-pop-up" movieId={movieId} title={title} reviews={reviews}   />
+                <ReviewList className="review-list-pop-up" movieId={movieId} title={title} reviews={reviews} setShowReviewList={setShowReviewList}  />
                 </div>
                 ) : null}
                 </div>
