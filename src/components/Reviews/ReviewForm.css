@@ -104,7 +104,7 @@
     justify-self: center;
     position: fixed;
     left:50%;
-    margin-bottom: 10px;
+    margin-top: -8px;
     transform:translateX(-50%);
 }
 

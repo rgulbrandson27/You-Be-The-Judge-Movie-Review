@@ -13,7 +13,7 @@
     position: relative;
     background-image: url("Images/MovieWheel.png");
     background-blend-mode: screen ;
-    /*  screen overlay darken lighten color-dodge saturation luminosity    */
+    /*  blend-mode options: screen overlay darken lighten color-dodge saturation luminosity    */
     background-size: 96%;
     
     background-repeat: no-repeat;
