@@ -27,8 +27,8 @@
 
 .exit-icon {
   color: #6d676f;
-  height: 44px;
-  width: 44px;
+  height: 46px;
+  width: 46px;
   z-index: 102;
   position: fixed;
   text-align: center;
@@ -36,13 +36,14 @@
   margin-right: -350px;
   margin-top: 0px;
   padding: -8px;
+  border-radius: 5rem;
 }
 
 .exit-icon-background {
   background-color: white;
   z-index: 101;
-  height: 25px;
-  width: 25px;
+  height: 28px;
+  width: 28px;
   margin-right: -350px;
   position: fixed;
   margin-top: 10px;

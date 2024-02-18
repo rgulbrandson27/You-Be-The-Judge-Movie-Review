@@ -1,127 +1,121 @@
 .review-container {
-    display: flex;
-    position:fixed;
-    justify-self: center;
-    flex-direction: column;
-    min-height: 480px;
-    max-height: 90%;
-    width: 420px;
-    outline: solid 10px  #0A9396;
-    padding-top: 10px;
-    margin-top: -40px;
-    align-content: center;
-    align-items: center;
-    border-radius: .5rem;
-    background-color: #6d676f;
-    z-index: 100;
-    left: 50%;
-    top: 80px;
-    transform: translate(-50%);
+  display: flex;
+  position: fixed;
+  justify-self: center;
+  flex-direction: column;
+  height: 540px;
+  width: 420px;
+  outline: solid 10px #0a9396;
+  padding-top: 10px;
+  margin-top: -40px;
+  align-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  background-color: #6d676f;
+  z-index: 100;
+  left: 50%;
+  top: 80px;
+  transform: translate(-50%);
+  padding-bottom: 20p;
 
-    /* position: fixed;
+  /* position: fixed;
     top: 40px;
     left: 50%;
     transform: translate(-50%); */
-    /* margin-top: -5rem; */
-    /* overflow-y: auto; */
+  /* margin-top: -5rem; */
+  /* overflow-y: auto; */
 }
 
 .review-title {
-    background-color: #0A9396;
-    border-radius: 10px;
-    display: flex;
-    width: 80%;
-    justify-content: center;
-    text-justify: center;
-    text-align: center;
-    align-content: center;
-    align-self: center;
-    margin-top: 10px;
-    padding: 6px;
-    font-size: minmax(1.6rem, 2rem);
-    color: white;
-    font-weight:400;
+  background-color: #0a9396;
+  border-radius: 10px;
+  display: flex;
+  width: 80%;
+  justify-content: center;
+  text-justify: center;
+  text-align: center;
+  align-content: center;
+  align-self: center;
+  margin-top: 10px;
+  padding: 6px;
+  font-size: minmax(1.6rem, 2rem);
+  color: white;
+  font-weight: 400;
 }
 
 .your-opinion {
-    display: flex;
-    width: 80%;
-    color:hwb(12 96% 2%);
-    font-size: 1.6rem;
-    margin-top: 10px;
-    margin-bottom: -2px;
-    justify-content: center;
-    align-self: center;
+  display: flex;
+  width: 80%;
+  color: hwb(12 96% 2%);
+  font-size: 1.6rem;
+  margin-top: 10px;
+  margin-bottom: -2px;
+  justify-content: center;
+  align-self: center;
 }
 
 .gavel-box {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    justify-self: center;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  justify-self: center;
 }
 
 .review-form {
-    display: flex;
-    width: 80%;
-    flex-direction: column;
-    margin-top: 0px;
-    height: auto;
-    align-self: center;
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  margin-top: 0px;
+  height: auto;
+  align-self: center;
 }
 
 .name {
-    width: 60%;
-    margin-bottom: 16px;
-    border: solid black 2px;
+  width: 60%;
+  margin-bottom: 16px;
+  border: solid black 2px;
 }
 
-.comments{
-    border: solid black 2px;
-    width:100%;
-    margin-bottom: 16px;
+.comments {
+  border: solid black 2px;
+  width: 100%;
+  margin-bottom: 16px;
 }
 
 .publish-button {
-    width: 56%;
-    height: 40px;
-    align-self: center;
-    margin-left: 22%;
-    margin-bottom: 20px;
+  width: 56%;
+  height: 40px;
+  align-self: center;
+  margin-left: 22%;
+  margin-bottom: 20px;
 }
 
 .publish-button:hover {
-    background-color:  #0A9396;
-    width: 56%;
-    height: 40px;
-    color: white;
-    margin-left: 22%;
+  background-color: #0a9396;
+  width: 56%;
+  height: 40px;
+  color: white;
+  margin-left: 22%;
 }
 
 .cancel-button {
-    display: flex;
-    align-self: center;
-    justify-self: center;
-    position: fixed;
-    left:50%;
-    margin-top: -8px;
-    transform:translateX(-50%);
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  position: fixed;
+  left: 50%;
+  margin-top: -8px;
+  transform: translateX(-50%);
 }
 
 .cancel-button:hover {
-    color: red;
+  color: red;
 }
 
 .reviewer-list {
-    width: 100%;
-    border: solid black 2px;
+  width: 100%;
+  border: solid black 2px;
 }
-
-
-
-
-
-
 
 /* .rating-box {
     display: flex;
@@ -141,8 +135,6 @@
     height: 70px;
     display: flex;
 } */
-
-
 
 /* .submit-button {
     margin-top: 20px;

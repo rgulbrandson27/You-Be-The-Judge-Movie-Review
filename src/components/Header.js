@@ -3,16 +3,20 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./Header.css";
 import MovieWheel from "./Images/MovieWheel.png";
 import MovieReel from "./Images/MovieReel.png";
+import ReelForGavel from "./Images/ReelForGavel.png";
 
 const Header = () => {
   return (
     <div className="grid-container" id="header">
+      {/* <img className="wheel left-wheel" src={MovieWheel} /> */}
       <div className="header-box">
         {/* <img className="reel" src={MovieReel}/> */}
-        <img className="wheel left-wheel" src={MovieWheel} />
+
         <h1 id="page-title">You Be The Judge</h1>
-        <img className="wheel right-wheel" src={MovieWheel} />
+
+        {/* <img className="reel-for-gavel" src={ReelForGavel} /> */}
       </div>
+      {/* <img className="wheel right-wheel" src={MovieWheel} /> */}
     </div>
   );
 };

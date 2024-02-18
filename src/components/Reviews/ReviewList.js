@@ -25,6 +25,8 @@ const ReviewList = ({ title, reviews, setShowReviewList, average }) => {
   //     fetchReviewData();
   // }, [movieId, reviews]);
 
+  const reversedReviews = reviews.slice().reverse();
+
   return (
     <div>
       <div className="review-list">
@@ -37,7 +39,7 @@ const ReviewList = ({ title, reviews, setShowReviewList, average }) => {
           Ave. Rating{reviews.average}
         </div> */}
         <h2 className="review-list-title">{title}</h2>
-        {reviews.map((review) => (
+        {reversedReviews.map((review) => (
           <div className="review-item" key={review.id} reviewid={review.id}>
             <p className="line">__________________________</p>
             <p className="name-rating-row">
