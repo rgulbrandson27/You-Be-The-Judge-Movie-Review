@@ -82,7 +82,7 @@ const movies = [
         reviewerName: "Cathy",
         reviewerRating: 2,
         reviewerComments:
-          "What a complete bore and waste of time.  The acting was overdone.",
+          "The acting was overdone.",
       },
       {
         id: 104,
@@ -91,7 +91,7 @@ const movies = [
         reviewerName: "Darren",
         reviewerRating: 3,
         reviewerComments:
-          "Hard to believe that 12 men would stay in a room that long without loosening their ties.  Would be interesting to see how if at least one of the jurors was a woman whether they would have behaved themselves better.",
+          "Impressive that those men are in a hot room for as many hours as were and not have loosened their ties.",
       },
     ],
   },
